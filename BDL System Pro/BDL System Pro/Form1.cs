@@ -95,10 +95,5 @@ namespace BDL_System_Pro
 			textBox1.Text = Convert.ToString(comboBox1.Items);
 		}
 
-		private void label1_Click(object sender, EventArgs e)
-		{
-
-
-		}
 	}
 }

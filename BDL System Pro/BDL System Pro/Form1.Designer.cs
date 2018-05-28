@@ -106,7 +106,6 @@
 			this.label1.Size = new System.Drawing.Size(789, 55);
 			this.label1.TabIndex = 4;
 			this.label1.Text = "BDL SYSTEME D\'ENCAISEMENT";
-			this.label1.Click += new System.EventHandler(this.label1_Click);
 			// 
 			// label2
 			// 
