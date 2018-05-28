@@ -241,7 +241,7 @@
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(75, 23);
             this.btn_Insert.TabIndex = 14;
-            this.btn_Insert.Text = "button4";
+            this.btn_Insert.Text = "Ajouter";
             this.btn_Insert.UseVisualStyleBackColor = true;
             // 
             // btn_Update
