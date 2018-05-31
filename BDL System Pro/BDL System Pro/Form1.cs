@@ -95,41 +95,38 @@ namespace BDL_System_Pro
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			textBox1.Text = Convert.ToString(comboBox1.Items);
+				this.pictureBox6.Visible = true;
+				this.label9.Visible = true;
+				this.btn_New.Visible = true;
+				this.button4.Visible = true;
+				this.label20.Visible = true;
+				this.label21.Visible = true;
+				this.label22.Visible = true;
+				this.label23.Visible = true;
+				this.label24.Visible = true;
+				this.label25.Visible = true;
+				this.label15.Visible = true;
+				this.label16.Visible = true;
+				this.label17.Visible = true;
+				this.label18.Visible = true;
+				this.label19.Visible = true;
+				this.txt_Nom2.Visible = true;
+				txt_Maint2.Visible = true;
+				txt_Dat2.Visible = true;
+				txt_Adr2.Visible = true;
+				txt_Cp2.Visible = true;
+				txt_Ville2.Visible = true;
+				txt_Gsm2.Visible = true;
+				txt_Fix2.Visible = true;
+				txt_Resp2.Visible = true;
+				txt_Mail2.Visible = true;
+				txt_Siret2.Visible = true;
+				txt_Web2.Visible = true;
+				label26.Visible = true;
 		}
 
 		private void btn_Insert_Click_1(object sender, EventArgs e)
 		{
-			if (txt_Name.Text != "" && txt_Ville.Text != "")
-			{
-				command = new MySqlCommand("insert into clients(Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret,Web) values (@nom,@maint,@date,@adr,@cp,@ville,@gsm,@fixe,@resp,@mail,@siret,@web)", connection);
-				connection.Open();
-				command.Parameters.AddWithValue("@nom", txt_Name.Text);
-				command.Parameters.AddWithValue("@maint", txt_Maint.Text);
-				command.Parameters.AddWithValue("@date", txt_Date.Text);
-				command.Parameters.AddWithValue("@adr", txt_Adr.Text);
-				command.Parameters.AddWithValue("@cp", txt_CP.Text);
-				command.Parameters.AddWithValue("@ville", txt_Ville.Text);
-				command.Parameters.AddWithValue("@gsm", txt_Gsm.Text);
-				command.Parameters.AddWithValue("@fixe", txt_Fix.Text);
-				command.Parameters.AddWithValue("@resp", txt_Resp.Text);
-				command.Parameters.AddWithValue("@mail", txt_Mail.Text);
-				command.Parameters.AddWithValue("@siret", txt_Siret.Text);
-				command.Parameters.AddWithValue("@web", txt_Web.Text);
-
-
-
-				command.ExecuteNonQuery();
-				connection.Close();
-				MessageBox.Show("Ajouter avec succes");
-				DisplayData();
-				ClearData();
-
-			}
-			else
-			{
-				MessageBox.Show("Remplir les champs");
-			}
 
 		}
 
@@ -146,7 +143,8 @@ namespace BDL_System_Pro
 
 		private void ClearData()
 		{
-			txt_Name.Text = "";
+			textBox1.Text = "";
+			txt_Maint.Text = "";
 			txt_Adr.Text = "";
 			txt_Date.Text = "";
 			txt_Maint.Text = "";
@@ -162,15 +160,32 @@ namespace BDL_System_Pro
 
 		}
 
+		private void ClearData2()
+		{
+			txt_Nom2.Text = "";
+			txt_Maint2.Text = "";
+			txt_Adr2.Text = "";
+			txt_Dat2.Text = "";
+			txt_Cp2.Text = "";
+			txt_Ville2.Text = "";
+			txt_Siret2.Text = "";
+			txt_Web2.Text = "";
+			txt_Resp2.Text = "";
+			txt_Gsm2.Text = "";
+			txt_Fix2.Text = "";
+			txt_Mail2.Text = "";
+			code_client = 0;
+		}
+
 
 		private void btn_Update_Click_1(object sender, EventArgs e)
 		{
-			if (txt_Ville.Text != "" && txt_Name.Text != "")
+			if (code_client != 0)
 			{
 				command = new MySqlCommand("update clients set Nom = @nom , Maintenance = @maint, DateMaintenance = @date, Adresse = @adr,Cp = @cp,Ville = @ville, Gsm = @gsm, Fixe = @fixe,Responsable = @resp , Mail = @mail, Siret = @siret, Web = @web where code_client  = @id", connection);
 				connection.Open();
 				command.Parameters.AddWithValue("@id", code_client);
-				command.Parameters.AddWithValue("@nom", txt_Name.Text);
+				command.Parameters.AddWithValue("@nom", textBox1.Text);
 				command.Parameters.AddWithValue("@maint", txt_Maint.Text);
 				command.Parameters.AddWithValue("@date", txt_Date.Text);
 				command.Parameters.AddWithValue("@adr", txt_Adr.Text);
@@ -191,9 +206,7 @@ namespace BDL_System_Pro
 			{
 				MessageBox.Show("Selectionner une ligne !");
 			}
-
 		}
-
 		private void btn_Delete_Click_1(object sender, EventArgs e)
 		{
 			if (code_client != 0)
@@ -203,8 +216,13 @@ namespace BDL_System_Pro
 				command.ExecuteReader();
 				//command.Parameters.AddWithValue("@id", code_client);
 				connection.Close();
-				MessageBox.Show("Ligne supprimé avec succès");
 				DisplayData();
+				this.btn_Delete.Visible = false;
+				this.pictureBox5.Visible = false;
+				this.label6.Visible = false;
+				this.textBox2.Visible = false;
+				this.button2.Visible = false;
+				this.btn_Delete.Visible = false;
 				ClearData();
 
 
@@ -218,15 +236,25 @@ namespace BDL_System_Pro
 
 		private void button3_Click_1(object sender, EventArgs e)
 		{
-			this.btn_Delete.Visible = true;
+			if (code_client != 0)
+			{
+				this.btn_Delete.Visible = true;
+				this.pictureBox5.Visible = true;
+				this.label6.Visible = true;
+				this.textBox2.Visible = true;
+				this.button2.Visible = true;
+			}
+			else
+			{
+				MessageBox.Show("Selectionner un client !");
+			}
 		}
 
 		private void BdlDataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-			connection.Open();
 			code_client = Convert.ToInt32(BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-			txt_Name.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
 			textBox1.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+			textBox2.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
 			this.textBox1.Visible = true;
 			txt_Maint.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
 			txt_Date.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
@@ -243,6 +271,130 @@ namespace BDL_System_Pro
 			connection.Close();
 		}
 
+		private void pictureBox1_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label3_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Name_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			this.btn_Delete.Visible = false;
+			this.pictureBox5.Visible = false;
+			this.label6.Visible = false;
+			this.textBox2.Visible = false;
+			this.button2.Visible = false;
+			this.btn_Delete.Visible = false;
+		}
+
+		private void button4_Click(object sender, EventArgs e)
+		{
+			this.pictureBox6.Visible = false;
+			this.label9.Visible = false;
+			this.btn_New.Visible = false;
+			this.button4.Visible = false;
+			this.label20.Visible = false;
+			this.label21.Visible = false;
+			this.label22.Visible = false;
+			this.label23.Visible = false;
+			this.label24.Visible = false;
+			this.label25.Visible = false;
+			this.label15.Visible = false;
+			this.label16.Visible = false;
+			this.label17.Visible = false;
+			this.label18.Visible = false;
+			this.label19.Visible = false;
+			this.txt_Nom2.Visible = false;
+			txt_Maint2.Visible = false;
+			txt_Dat2.Visible = false;
+			txt_Adr2.Visible = false;
+			txt_Cp2.Visible = false;
+			txt_Ville2.Visible = false;
+			txt_Gsm2.Visible = false;
+			txt_Fix2.Visible = false;
+			txt_Resp2.Visible = false;
+			txt_Mail2.Visible = false;
+			txt_Siret2.Visible = false;
+			txt_Web2.Visible = false;
+			label26.Visible = false;
+			ClearData2();
+		}
+
+		private void btn_New_Click(object sender, EventArgs e)
+		{
+			if (txt_Nom2.Text != "")
+			{
+				command = new MySqlCommand("insert into clients(Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret,Web) values (@nom,@maint,@date,@adr,@cp,@ville,@gsm,@fixe,@resp,@mail,@siret,@web)", connection);
+				connection.Open();
+				command.Parameters.AddWithValue("@nom", txt_Nom2.Text);
+				command.Parameters.AddWithValue("@maint", txt_Maint2.Text);
+				command.Parameters.AddWithValue("@date", txt_Dat2.Text);
+				command.Parameters.AddWithValue("@adr", txt_Adr2.Text);
+				command.Parameters.AddWithValue("@cp", txt_Cp2.Text);
+				command.Parameters.AddWithValue("@ville", txt_Ville2.Text);
+				command.Parameters.AddWithValue("@gsm", txt_Gsm2.Text);
+				command.Parameters.AddWithValue("@fixe", txt_Fix2.Text);
+				command.Parameters.AddWithValue("@resp", txt_Resp2.Text);
+				command.Parameters.AddWithValue("@mail", txt_Mail2.Text);
+				command.Parameters.AddWithValue("@siret", txt_Siret2.Text);
+				command.Parameters.AddWithValue("@web", txt_Web2.Text);
+
+
+
+				command.ExecuteNonQuery();
+				connection.Close();
+				DisplayData();
+				this.pictureBox6.Visible = false;
+				this.label9.Visible = false;
+				this.btn_New.Visible = false;
+				this.button4.Visible = false;
+				this.label20.Visible = false;
+				this.label21.Visible = false;
+				this.label22.Visible = false;
+				this.label23.Visible = false;
+				this.label24.Visible = false;
+				this.label25.Visible = false;
+				this.label15.Visible = false;
+				this.label16.Visible = false;
+				this.label17.Visible = false;
+				this.label18.Visible = false;
+				this.label19.Visible = false;
+				this.txt_Nom2.Visible = false;
+				txt_Maint2.Visible = false;
+				txt_Dat2.Visible = false;
+				txt_Adr2.Visible = false;
+				txt_Cp2.Visible = false;
+				txt_Ville2.Visible = false;
+				txt_Gsm2.Visible = false;
+				txt_Fix2.Visible = false;
+				txt_Resp2.Visible = false;
+				txt_Mail2.Visible = false;
+				txt_Siret2.Visible = false;
+				txt_Web2.Visible = false;
+				label26.Visible = false;
+				ClearData2();
+
+			}
+			else
+			{
+				MessageBox.Show("Replir le champ 'Nom de l'entreprise'");
+			}
+
+		}
+
+		private void txt_Date2_Click(object sender, EventArgs e)
+		{
+
+		}
 	}
 
 }
