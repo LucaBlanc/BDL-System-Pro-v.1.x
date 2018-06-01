@@ -1245,6 +1245,8 @@
 		private System.Windows.Forms.TextBox txt_Resp2;
 		private System.Windows.Forms.Label label26;
 		private System.Windows.Forms.TextBox txt_Fix2;
+		private System.Windows.Forms.PictureBox pictureBox7;
+		private System.Windows.Forms.PictureBox pictureBox8;
 	}
 }
 
