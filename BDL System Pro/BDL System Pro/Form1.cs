@@ -36,6 +36,7 @@ namespace BDL_System_Pro
 		{
 			BdlDataGridView1.DataSource = Getbdd();
 			searchData("");
+			Datasize();
 
 		}
 
@@ -47,7 +48,7 @@ namespace BDL_System_Pro
 
 			using (MySqlConnection con = new MySqlConnection(connString))
 			{
-				using (MySqlCommand cmd = new MySqlCommand("SELECT code_client,Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret,Web FROM clients", con))
+				using (MySqlCommand cmd = new MySqlCommand("SELECT Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret,Web,code_client FROM clients", con))
 
 				{
 					con.Open();
@@ -55,12 +56,27 @@ namespace BDL_System_Pro
 					MySqlDataReader reader = cmd.ExecuteReader();
 
 					dtbdd.Load(reader);
+					
 
 				}
 			}
 
 			return dtbdd;
 		}
+
+		private void Datasize()
+		{
+			BdlDataGridView1.Columns[0].Width = 180;
+			BdlDataGridView1.Columns[1].Width = 120;
+			BdlDataGridView1.Columns[2].Width = 170;
+			BdlDataGridView1.Columns[3].Width = 200;
+			BdlDataGridView1.Columns[4].Width = 55;
+			BdlDataGridView1.Columns[8].Width = 130;
+			BdlDataGridView1.Columns[9].Width = 200;
+			BdlDataGridView1.Columns[10].Width = 130;
+			BdlDataGridView1.Columns[11].Width = 200;
+		}
+
 
 		private void label2_Click(object sender, EventArgs e)
 		{
@@ -74,12 +90,13 @@ namespace BDL_System_Pro
 
 		public void searchData(string valueToSearch)
 		{
-			string query = "SELECT code_client,Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret,Web FROM clients WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
+			string query = "SELECT Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret,Web,code_client FROM clients WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
 			command = new MySqlCommand(query, connection);
 			adapter = new MySqlDataAdapter(command);
 			table = new DataTable();
 			adapter.Fill(table);
 			BdlDataGridView1.DataSource = table;
+
 		}
 
 		private void BTN_Rech_Click(object sender, EventArgs e)
@@ -123,6 +140,7 @@ namespace BDL_System_Pro
 				txt_Siret2.Visible = true;
 				txt_Web2.Visible = true;
 				label26.Visible = true;
+				pictureBox7.Visible = true;
 		}
 
 		private void btn_Insert_Click_1(object sender, EventArgs e)
@@ -223,6 +241,7 @@ namespace BDL_System_Pro
 				this.textBox2.Visible = false;
 				this.button2.Visible = false;
 				this.btn_Delete.Visible = false;
+				this.pictureBox8.Visible = false;
 				ClearData();
 
 
@@ -243,6 +262,7 @@ namespace BDL_System_Pro
 				this.label6.Visible = true;
 				this.textBox2.Visible = true;
 				this.button2.Visible = true;
+				this.pictureBox8.Visible = true;
 			}
 			else
 			{
@@ -252,21 +272,21 @@ namespace BDL_System_Pro
 
 		private void BdlDataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-			code_client = Convert.ToInt32(BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-			textBox1.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
-			textBox2.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+			code_client = Convert.ToInt32(BdlDataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
+			textBox1.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+			textBox2.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 			this.textBox1.Visible = true;
-			txt_Maint.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
-			txt_Date.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
-			txt_Adr.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-			txt_CP.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
-			txt_Ville.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
-			txt_Gsm.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
-			txt_Fix.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
-			txt_Resp.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
-			txt_Mail.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
-			txt_Siret.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
-			txt_Web.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString();
+			txt_Maint.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
+			txt_Date.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[2].Value.ToString();
+			txt_Adr.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+			txt_CP.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
+			txt_Ville.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[5].Value.ToString();
+			txt_Gsm.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[6].Value.ToString();
+			txt_Fix.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+			txt_Resp.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[8].Value.ToString();
+			txt_Mail.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
+			txt_Siret.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
+			txt_Web.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
 
 			connection.Close();
 		}
@@ -294,6 +314,7 @@ namespace BDL_System_Pro
 			this.textBox2.Visible = false;
 			this.button2.Visible = false;
 			this.btn_Delete.Visible = false;
+			this.pictureBox8.Visible = false;
 		}
 
 		private void button4_Click(object sender, EventArgs e)
@@ -308,6 +329,7 @@ namespace BDL_System_Pro
 			this.label23.Visible = false;
 			this.label24.Visible = false;
 			this.label25.Visible = false;
+			pictureBox7.Visible = false;
 			this.label15.Visible = false;
 			this.label16.Visible = false;
 			this.label17.Visible = false;
@@ -359,6 +381,7 @@ namespace BDL_System_Pro
 				this.button4.Visible = false;
 				this.label20.Visible = false;
 				this.label21.Visible = false;
+				pictureBox7.Visible = false;
 				this.label22.Visible = false;
 				this.label23.Visible = false;
 				this.label24.Visible = false;
@@ -392,6 +415,131 @@ namespace BDL_System_Pro
 		}
 
 		private void txt_Date2_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label21_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Fix2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Resp2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label26_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label25_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Gsm2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label20_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Nom2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label24_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Mail2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label17_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Dat2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label16_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Adr2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Cp2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Ville2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Web2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Siret2_TextChanged(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BdlDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void pictureBox6_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void pictureBox7_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label18_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label19_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label22_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label23_Click(object sender, EventArgs e)
 		{
 
 		}

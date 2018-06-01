@@ -37,7 +37,7 @@ namespace BDL_System_Pro
 		private void Button_Client_Click(object sender, EventArgs e)
 		{
 			clients client = new clients();
-			client.Show();
+			client.ShowDialog();
 		}
 	}
 }
