@@ -39,5 +39,11 @@ namespace BDL_System_Pro
 			clients client = new clients();
 			client.Show();
 		}
-	}
+
+        private void Button_Parc_Click(object sender, EventArgs e)
+        {
+            parc parc = new parc();
+            parc.Show();
+        }
+    }
 }
