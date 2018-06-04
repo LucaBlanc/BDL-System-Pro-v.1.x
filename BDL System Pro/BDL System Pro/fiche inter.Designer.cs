@@ -133,7 +133,7 @@
 			// pictureBox2
 			// 
 			this.pictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-			this.pictureBox2.Location = new System.Drawing.Point(811, -1);
+			this.pictureBox2.Location = new System.Drawing.Point(811, 0);
 			this.pictureBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
 			this.pictureBox2.Name = "pictureBox2";
 			this.pictureBox2.Size = new System.Drawing.Size(368, 105);
@@ -357,7 +357,7 @@
 			this.comboBox1.FormattingEnabled = true;
 			this.comboBox1.Items.AddRange(new object[] {
             ""});
-			this.comboBox1.Location = new System.Drawing.Point(850, 271);
+			this.comboBox1.Location = new System.Drawing.Point(850, 265);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(288, 35);
 			this.comboBox1.TabIndex = 44;
@@ -369,7 +369,7 @@
 			this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.label9.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.label9.Location = new System.Drawing.Point(876, 248);
+			this.label9.Location = new System.Drawing.Point(876, 242);
 			this.label9.Name = "label9";
 			this.label9.Size = new System.Drawing.Size(236, 20);
 			this.label9.TabIndex = 45;
@@ -396,13 +396,14 @@
 			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button1.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.button1.Location = new System.Drawing.Point(612, 29);
+			this.button1.Location = new System.Drawing.Point(612, 50);
 			this.button1.Margin = new System.Windows.Forms.Padding(4);
 			this.button1.Name = "button1";
 			this.button1.Size = new System.Drawing.Size(192, 38);
 			this.button1.TabIndex = 141;
 			this.button1.Text = "SUPPRIMER LA FICHE";
 			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Visible = false;
 			this.button1.Click += new System.EventHandler(this.button1_Click);
 			// 
 			// label10
@@ -452,7 +453,7 @@
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.button2.Location = new System.Drawing.Point(472, 501);
+			this.button2.Location = new System.Drawing.Point(485, 501);
 			this.button2.Margin = new System.Windows.Forms.Padding(4);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(147, 39);
@@ -460,6 +461,7 @@
 			this.button2.Text = "ANNULER";
 			this.button2.UseVisualStyleBackColor = false;
 			this.button2.Visible = false;
+			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// btn_Delete
 			// 
@@ -499,6 +501,7 @@
 			this.label11.Size = new System.Drawing.Size(301, 20);
 			this.label11.TabIndex = 148;
 			this.label11.Text = "ID DE LA FICHE D\'INTERVENTION";
+			this.label11.Visible = false;
 			// 
 			// fiche_inter
 			// 
@@ -538,6 +541,8 @@
 			this.Controls.Add(this.pictureBox3);
 			this.Controls.Add(this.pictureBox5);
 			this.Controls.Add(this.BdlDataGridView1);
+			this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+			this.MaximizeBox = false;
 			this.Name = "fiche_inter";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "fiche_inter";

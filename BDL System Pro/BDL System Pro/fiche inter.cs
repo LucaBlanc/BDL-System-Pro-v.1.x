@@ -36,7 +36,7 @@ namespace BDL_System_Pro
 
 			using (MySqlConnection con = new MySqlConnection(connString))
 			{
-				using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM interventions where N_client'" + client.Nom_client + "'", con))
+				using (MySqlCommand cmd = new MySqlCommand("SELECT * FROM interventions where N_client = '" + client.Nom_client + "'", con))
 
 				{
 					con.Open();
@@ -72,7 +72,7 @@ namespace BDL_System_Pro
 			try
 			{
 				MySqlConnection connection = new MySqlConnection("server=bj881856-001.dbaas.ovh.net;user id=bdl; database=Bdl; port=35312; password=Bdl69100");
-				string selectQuery = "SELECT Nserie,Categorie from Parc where N_client = '"+ client.Nom_client + "'";
+				string selectQuery = "SELECT * from Parc where N_client = '"+ client.Nom_client + "'";
 				connection.Open();
 				MySqlCommand command = new MySqlCommand(selectQuery, connection);
 
@@ -80,7 +80,7 @@ namespace BDL_System_Pro
 
 				while (reader.Read())
 				{
-					comboBox1.Items.Add(reader.GetString("Categorie"));
+					comboBox1.Items.Add(reader.GetString("Model"));
 				}
 
 			}
@@ -95,7 +95,7 @@ namespace BDL_System_Pro
 		{
 			//connection.Open();
 			DataTable dt = new DataTable();
-			adapter = new MySqlDataAdapter("Select * From interventions", connection);
+			adapter = new MySqlDataAdapter("SELECT * FROM interventions where N_client = '" + client.Nom_client + "'", connection);
 			adapter.Fill(dt);
 			BdlDataGridView1.DataSource = dt;
 			connection.Close();
@@ -104,7 +104,9 @@ namespace BDL_System_Pro
 
 		private void BdlDataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-			textBox2.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[7].Value.ToString();
+			textBox2.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+			id_inter = Convert.ToInt32(BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+			this.button1.Visible = true;
 		}
 
 		private void button1_Click(object sender, EventArgs e)
@@ -117,6 +119,7 @@ namespace BDL_System_Pro
 				this.textBox2.Visible = true;
 				this.button2.Visible = true;
 				this.pictureBox9.Visible = true;
+				this.label11.Visible = true;
 			}
 			else
 			{
@@ -126,7 +129,32 @@ namespace BDL_System_Pro
 
 		private void btn_Delete_Click(object sender, EventArgs e)
 		{
+			connection.Open();
+			command = new MySqlCommand("DELETE FROM interventions WHERE code_inter = '" + id_inter + "'", connection);
+			command.ExecuteReader();
+			connection.Close();
+			DisplayData();
+			this.button1.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox5.Visible = false;
+			this.label6.Visible = false;
+			this.textBox2.Visible = false;
+			this.button2.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox9.Visible = false;
+			this.label11.Visible = false;
+		}
 
+		private void ClearData()
+		{
+			txt_Date.Text = "";
+			txt_Temps.Text = "";
+			comboBox1.SelectedItem = "";
+			txt_Nserie.Text = "";
+			txt_Type.Text = "";
+			txt_Panne.Text = "";
+			txt_Com.Text = "";
+			txt_Sign.Text = "";
 		}
 
 		private void btn_Update_Click(object sender, EventArgs e)
@@ -143,7 +171,7 @@ namespace BDL_System_Pro
 
 			if (txt_Date.Text != "")
 			{
-				command = new MySqlCommand("insert into interventions (Date,Temps,Nserie,Categorie,Panne,Commentaire,Signature,N_client) values (@date,@temps,@categorie,@serie,@panne,@com,@sign,@client)", connection);
+				command = new MySqlCommand("insert into interventions (Date,Temps,Nserie,Categorie,Panne,Commentaire,Signature,N_client) values (@date,@temps,@serie,@categorie,@panne,@com,@sign,@client)", connection);
 				connection.Open();
 				command.Parameters.AddWithValue("@date", txt_Date.Text);
 				command.Parameters.AddWithValue("@temps", txt_Temps.Text);
@@ -165,6 +193,19 @@ namespace BDL_System_Pro
 				MessageBox.Show("Replir le champ 'Date au format (aaaa-mm-jj)'");
 			}
 
+		}
+
+		private void button2_Click(object sender, EventArgs e)
+		{
+			this.button1.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox5.Visible = false;
+			this.label6.Visible = false;
+			this.textBox2.Visible = false;
+			this.button2.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox9.Visible = false;
+			this.label11.Visible = false;
 		}
 	}
 
