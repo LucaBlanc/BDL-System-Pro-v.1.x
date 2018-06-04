@@ -31,10 +31,6 @@ namespace BDL_System_Pro
 			Getbdd();
 		}
 		
-		public class client
-		{
-			public static long code_client = 0;
-		}
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
@@ -271,6 +267,7 @@ namespace BDL_System_Pro
 			this.button3.Visible = true;
 			client.code_client = Convert.ToInt64(BdlDataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
 			textBox1.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
+			client.Nom_client = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 			textBox2.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 			this.textBox1.Visible = true;
 			txt_Maint.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[1].Value.ToString();
@@ -413,7 +410,16 @@ namespace BDL_System_Pro
 
 		private void txt_Date2_Click(object sender, EventArgs e)
 		{
+			if(client.code_client != 0)
+			{
+				fiche_inter inter = new fiche_inter();
+				inter.ShowDialog();
 
+			}
+			else
+			{
+				MessageBox.Show("Selectionner un client");
+			}
 		}
 
 		private void label21_Click(object sender, EventArgs e)
@@ -556,7 +562,10 @@ namespace BDL_System_Pro
 
 		}
 	}
-
-    
+	public class client
+	{
+		public static long code_client = 0;
+		public static string Nom_client = "";
+	}
 
 }

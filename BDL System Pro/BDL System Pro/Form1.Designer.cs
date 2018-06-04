@@ -93,23 +93,23 @@
 			this.txt_Resp2 = new System.Windows.Forms.TextBox();
 			this.label26 = new System.Windows.Forms.Label();
 			this.txt_Fix2 = new System.Windows.Forms.TextBox();
+			this.pictureBox10 = new System.Windows.Forms.PictureBox();
+			this.pictureBox9 = new System.Windows.Forms.PictureBox();
 			this.pictureBox3 = new System.Windows.Forms.PictureBox();
 			this.pictureBox4 = new System.Windows.Forms.PictureBox();
 			this.pictureBox2 = new System.Windows.Forms.PictureBox();
 			this.pictureBox1 = new System.Windows.Forms.PictureBox();
-			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			this.pictureBox5 = new System.Windows.Forms.PictureBox();
-			this.pictureBox9 = new System.Windows.Forms.PictureBox();
-			this.pictureBox10 = new System.Windows.Forms.PictureBox();
+			this.pictureBox6 = new System.Windows.Forms.PictureBox();
 			((System.ComponentModel.ISupportInitialize)(this.BdlDataGridView1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// BdlDataGridView1
@@ -1012,6 +1012,29 @@
 			this.txt_Fix2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			this.txt_Fix2.Visible = false;
 			// 
+			// pictureBox10
+			// 
+			this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.pictureBox10.Location = new System.Drawing.Point(483, 139);
+			this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.pictureBox10.Name = "pictureBox10";
+			this.pictureBox10.Size = new System.Drawing.Size(567, 54);
+			this.pictureBox10.TabIndex = 61;
+			this.pictureBox10.TabStop = false;
+			this.pictureBox10.Visible = false;
+			this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+			// 
+			// pictureBox9
+			// 
+			this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.pictureBox9.Location = new System.Drawing.Point(16, 139);
+			this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.pictureBox9.Name = "pictureBox9";
+			this.pictureBox9.Size = new System.Drawing.Size(461, 54);
+			this.pictureBox9.TabIndex = 60;
+			this.pictureBox9.TabStop = false;
+			this.pictureBox9.Visible = false;
+			// 
 			// pictureBox3
 			// 
 			this.pictureBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1054,17 +1077,6 @@
 			this.pictureBox1.TabStop = false;
 			this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
 			// 
-			// pictureBox6
-			// 
-			this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.pictureBox6.Location = new System.Drawing.Point(483, 133);
-			this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.pictureBox6.Name = "pictureBox6";
-			this.pictureBox6.Size = new System.Drawing.Size(567, 485);
-			this.pictureBox6.TabIndex = 44;
-			this.pictureBox6.TabStop = false;
-			this.pictureBox6.Visible = false;
-			// 
 			// pictureBox5
 			// 
 			this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -1076,28 +1088,16 @@
 			this.pictureBox5.TabStop = false;
 			this.pictureBox5.Visible = false;
 			// 
-			// pictureBox9
+			// pictureBox6
 			// 
-			this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.pictureBox9.Location = new System.Drawing.Point(16, 139);
-			this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.pictureBox9.Name = "pictureBox9";
-			this.pictureBox9.Size = new System.Drawing.Size(461, 54);
-			this.pictureBox9.TabIndex = 60;
-			this.pictureBox9.TabStop = false;
-			this.pictureBox9.Visible = false;
-			// 
-			// pictureBox10
-			// 
-			this.pictureBox10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.pictureBox10.Location = new System.Drawing.Point(483, 139);
-			this.pictureBox10.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.pictureBox10.Name = "pictureBox10";
-			this.pictureBox10.Size = new System.Drawing.Size(567, 54);
-			this.pictureBox10.TabIndex = 61;
-			this.pictureBox10.TabStop = false;
-			this.pictureBox10.Visible = false;
-			this.pictureBox10.Click += new System.EventHandler(this.pictureBox10_Click);
+			this.pictureBox6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.pictureBox6.Location = new System.Drawing.Point(483, 133);
+			this.pictureBox6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.pictureBox6.Name = "pictureBox6";
+			this.pictureBox6.Size = new System.Drawing.Size(567, 485);
+			this.pictureBox6.TabIndex = 44;
+			this.pictureBox6.TabStop = false;
+			this.pictureBox6.Visible = false;
 			// 
 			// clients
 			// 
@@ -1188,14 +1188,14 @@
 			this.Text = "BDL System Pro";
 			this.Load += new System.EventHandler(this.Form1_Load);
 			((System.ComponentModel.ISupportInitialize)(this.BdlDataGridView1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-			((System.ComponentModel.ISupportInitialize)(this.pictureBox10)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
