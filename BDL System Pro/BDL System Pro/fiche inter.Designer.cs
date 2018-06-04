@@ -52,11 +52,22 @@
 			this.txt_Date = new System.Windows.Forms.TextBox();
 			this.comboBox1 = new System.Windows.Forms.ComboBox();
 			this.label9 = new System.Windows.Forms.Label();
+			this.btn_Update = new System.Windows.Forms.Button();
+			this.button1 = new System.Windows.Forms.Button();
+			this.label10 = new System.Windows.Forms.Label();
+			this.pictureBox9 = new System.Windows.Forms.PictureBox();
+			this.textBox2 = new System.Windows.Forms.TextBox();
+			this.button2 = new System.Windows.Forms.Button();
+			this.btn_Delete = new System.Windows.Forms.Button();
+			this.pictureBox5 = new System.Windows.Forms.PictureBox();
+			this.label11 = new System.Windows.Forms.Label();
 			((System.ComponentModel.ISupportInitialize)(this.BdlDataGridView1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
 			this.SuspendLayout();
 			// 
 			// BdlDataGridView1
@@ -73,6 +84,7 @@
 			this.BdlDataGridView1.RowTemplate.Height = 24;
 			this.BdlDataGridView1.Size = new System.Drawing.Size(816, 760);
 			this.BdlDataGridView1.TabIndex = 1;
+			this.BdlDataGridView1.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.BdlDataGridView1_RowHeaderMouseClick);
 			// 
 			// label2
 			// 
@@ -80,7 +92,7 @@
 			this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.label2.Location = new System.Drawing.Point(8, 56);
+			this.label2.Location = new System.Drawing.Point(7, 56);
 			this.label2.Name = "label2";
 			this.label2.Size = new System.Drawing.Size(222, 32);
 			this.label2.TabIndex = 11;
@@ -144,7 +156,7 @@
 			this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
 			this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.label3.Location = new System.Drawing.Point(835, 45);
+			this.label3.Location = new System.Drawing.Point(835, 36);
 			this.label3.Name = "label3";
 			this.label3.Size = new System.Drawing.Size(315, 32);
 			this.label3.TabIndex = 13;
@@ -156,11 +168,11 @@
 			this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.label14.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.label14.Location = new System.Drawing.Point(919, 531);
+			this.label14.Location = new System.Drawing.Point(942, 702);
 			this.label14.Name = "label14";
-			this.label14.Size = new System.Drawing.Size(162, 20);
+			this.label14.Size = new System.Drawing.Size(112, 20);
 			this.label14.TabIndex = 43;
-			this.label14.Text = "TELEPHONE FIXE";
+			this.label14.Text = "SIGNATURE";
 			// 
 			// txt_Sign
 			// 
@@ -169,7 +181,7 @@
 			this.txt_Sign.Cursor = System.Windows.Forms.Cursors.Arrow;
 			this.txt_Sign.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Sign.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.txt_Sign.Location = new System.Drawing.Point(850, 553);
+			this.txt_Sign.Location = new System.Drawing.Point(850, 724);
 			this.txt_Sign.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Sign.Name = "txt_Sign";
 			this.txt_Sign.Size = new System.Drawing.Size(288, 27);
@@ -182,11 +194,11 @@
 			this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.label7.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.label7.Location = new System.Drawing.Point(895, 479);
+			this.label7.Location = new System.Drawing.Point(921, 479);
 			this.label7.Name = "label7";
-			this.label7.Size = new System.Drawing.Size(218, 20);
+			this.label7.Size = new System.Drawing.Size(144, 20);
 			this.label7.TabIndex = 41;
-			this.label7.Text = "TELEPHONE PORTABLE";
+			this.label7.Text = "COMMENTAIRE";
 			// 
 			// txt_Com
 			// 
@@ -195,10 +207,11 @@
 			this.txt_Com.Cursor = System.Windows.Forms.Cursors.Arrow;
 			this.txt_Com.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Com.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.txt_Com.Location = new System.Drawing.Point(850, 501);
+			this.txt_Com.Location = new System.Drawing.Point(850, 507);
 			this.txt_Com.Margin = new System.Windows.Forms.Padding(4);
+			this.txt_Com.Multiline = true;
 			this.txt_Com.Name = "txt_Com";
-			this.txt_Com.Size = new System.Drawing.Size(288, 27);
+			this.txt_Com.Size = new System.Drawing.Size(288, 191);
 			this.txt_Com.TabIndex = 40;
 			this.txt_Com.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
 			// 
@@ -208,11 +221,11 @@
 			this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.label8.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.label8.Location = new System.Drawing.Point(967, 427);
+			this.label8.Location = new System.Drawing.Point(957, 427);
 			this.label8.Name = "label8";
-			this.label8.Size = new System.Drawing.Size(60, 20);
+			this.label8.Size = new System.Drawing.Size(72, 20);
 			this.label8.TabIndex = 39;
-			this.label8.Text = "VILLE";
+			this.label8.Text = "PANNE";
 			// 
 			// txt_Panne
 			// 
@@ -234,11 +247,11 @@
 			this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.label5.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.label5.Location = new System.Drawing.Point(933, 373);
+			this.label5.Location = new System.Drawing.Point(891, 373);
 			this.label5.Name = "label5";
-			this.label5.Size = new System.Drawing.Size(136, 20);
+			this.label5.Size = new System.Drawing.Size(205, 20);
 			this.label5.TabIndex = 37;
-			this.label5.Text = "CODE POSTAL";
+			this.label5.Text = "CATEGORIE MATERIEL";
 			// 
 			// txt_Type
 			// 
@@ -260,11 +273,11 @@
 			this.Nserie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.Nserie.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.Nserie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.Nserie.Location = new System.Drawing.Point(953, 318);
+			this.Nserie.Location = new System.Drawing.Point(938, 318);
 			this.Nserie.Name = "Nserie";
-			this.Nserie.Size = new System.Drawing.Size(91, 20);
+			this.Nserie.Size = new System.Drawing.Size(113, 20);
 			this.Nserie.TabIndex = 35;
-			this.Nserie.Text = "ADRESSE";
+			this.Nserie.Text = "N° DE SERIE";
 			// 
 			// txt_Nserie
 			// 
@@ -286,7 +299,7 @@
 			this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.label4.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-			this.label4.Location = new System.Drawing.Point(870, 176);
+			this.label4.Location = new System.Drawing.Point(859, 176);
 			this.label4.Name = "label4";
 			this.label4.Size = new System.Drawing.Size(253, 20);
 			this.label4.TabIndex = 33;
@@ -343,13 +356,11 @@
 			this.comboBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
 			this.comboBox1.FormattingEnabled = true;
 			this.comboBox1.Items.AddRange(new object[] {
-            " Ajouter",
-            " Test"});
+            ""});
 			this.comboBox1.Location = new System.Drawing.Point(850, 271);
 			this.comboBox1.Name = "comboBox1";
 			this.comboBox1.Size = new System.Drawing.Size(288, 35);
 			this.comboBox1.TabIndex = 44;
-			this.comboBox1.Text = " Ajouter";
 			this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
 			// 
 			// label9
@@ -364,11 +375,144 @@
 			this.label9.TabIndex = 45;
 			this.label9.Text = "SELECTION DU MATERIEL";
 			// 
+			// btn_Update
+			// 
+			this.btn_Update.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_Update.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.btn_Update.Location = new System.Drawing.Point(850, 795);
+			this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
+			this.btn_Update.Name = "btn_Update";
+			this.btn_Update.Size = new System.Drawing.Size(288, 38);
+			this.btn_Update.TabIndex = 141;
+			this.btn_Update.Text = "AJOUTER UNE INTERVENTION";
+			this.btn_Update.UseVisualStyleBackColor = false;
+			this.btn_Update.Click += new System.EventHandler(this.btn_Update_Click);
+			// 
+			// button1
+			// 
+			this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button1.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.button1.Location = new System.Drawing.Point(612, 29);
+			this.button1.Margin = new System.Windows.Forms.Padding(4);
+			this.button1.Name = "button1";
+			this.button1.Size = new System.Drawing.Size(192, 38);
+			this.button1.TabIndex = 141;
+			this.button1.Text = "SUPPRIMER LA FICHE";
+			this.button1.UseVisualStyleBackColor = false;
+			this.button1.Click += new System.EventHandler(this.button1_Click);
+			// 
+			// label10
+			// 
+			this.label10.AutoSize = true;
+			this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.label10.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			this.label10.Location = new System.Drawing.Point(262, 341);
+			this.label10.Name = "label10";
+			this.label10.Size = new System.Drawing.Size(288, 20);
+			this.label10.TabIndex = 145;
+			this.label10.Text = "CONFIERMER LA SUPPRESSION";
+			this.label10.Visible = false;
+			// 
+			// pictureBox9
+			// 
+			this.pictureBox9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.pictureBox9.Location = new System.Drawing.Point(171, 324);
+			this.pictureBox9.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.pictureBox9.Name = "pictureBox9";
+			this.pictureBox9.Size = new System.Drawing.Size(461, 54);
+			this.pictureBox9.TabIndex = 147;
+			this.pictureBox9.TabStop = false;
+			this.pictureBox9.Visible = false;
+			// 
+			// textBox2
+			// 
+			this.textBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+			this.textBox2.Cursor = System.Windows.Forms.Cursors.Arrow;
+			this.textBox2.Font = new System.Drawing.Font("Raleway Medium", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.textBox2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			this.textBox2.Location = new System.Drawing.Point(247, 427);
+			this.textBox2.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.textBox2.Name = "textBox2";
+			this.textBox2.ReadOnly = true;
+			this.textBox2.Size = new System.Drawing.Size(317, 28);
+			this.textBox2.TabIndex = 146;
+			this.textBox2.Text = "NOM CLIENT";
+			this.textBox2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+			this.textBox2.Visible = false;
+			// 
+			// button2
+			// 
+			this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.button2.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.button2.Location = new System.Drawing.Point(472, 501);
+			this.button2.Margin = new System.Windows.Forms.Padding(4);
+			this.button2.Name = "button2";
+			this.button2.Size = new System.Drawing.Size(147, 39);
+			this.button2.TabIndex = 143;
+			this.button2.Text = "ANNULER";
+			this.button2.UseVisualStyleBackColor = false;
+			this.button2.Visible = false;
+			// 
+			// btn_Delete
+			// 
+			this.btn_Delete.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+			this.btn_Delete.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.btn_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
+			this.btn_Delete.Location = new System.Drawing.Point(182, 501);
+			this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
+			this.btn_Delete.Name = "btn_Delete";
+			this.btn_Delete.Size = new System.Drawing.Size(253, 39);
+			this.btn_Delete.TabIndex = 142;
+			this.btn_Delete.Text = "CONFIRMER LA SUPPRESSION";
+			this.btn_Delete.UseVisualStyleBackColor = false;
+			this.btn_Delete.Visible = false;
+			this.btn_Delete.Click += new System.EventHandler(this.btn_Delete_Click);
+			// 
+			// pictureBox5
+			// 
+			this.pictureBox5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.pictureBox5.Location = new System.Drawing.Point(171, 318);
+			this.pictureBox5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.pictureBox5.Name = "pictureBox5";
+			this.pictureBox5.Size = new System.Drawing.Size(461, 215);
+			this.pictureBox5.TabIndex = 144;
+			this.pictureBox5.TabStop = false;
+			this.pictureBox5.Visible = false;
+			// 
+			// label11
+			// 
+			this.label11.AutoSize = true;
+			this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.label11.Font = new System.Drawing.Font("Raleway Medium", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+			this.label11.Location = new System.Drawing.Point(258, 403);
+			this.label11.Name = "label11";
+			this.label11.Size = new System.Drawing.Size(301, 20);
+			this.label11.TabIndex = 148;
+			this.label11.Text = "ID DE LA FICHE D\'INTERVENTION";
+			// 
 			// fiche_inter
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(1174, 859);
+			this.Controls.Add(this.label11);
+			this.Controls.Add(this.label10);
+			this.Controls.Add(this.pictureBox9);
+			this.Controls.Add(this.textBox2);
+			this.Controls.Add(this.button2);
+			this.Controls.Add(this.btn_Delete);
+			this.Controls.Add(this.button1);
+			this.Controls.Add(this.btn_Update);
 			this.Controls.Add(this.label9);
 			this.Controls.Add(this.comboBox1);
 			this.Controls.Add(this.label14);
@@ -391,8 +535,9 @@
 			this.Controls.Add(this.label1);
 			this.Controls.Add(this.pictureBox2);
 			this.Controls.Add(this.pictureBox1);
-			this.Controls.Add(this.BdlDataGridView1);
 			this.Controls.Add(this.pictureBox3);
+			this.Controls.Add(this.pictureBox5);
+			this.Controls.Add(this.BdlDataGridView1);
 			this.Name = "fiche_inter";
 			this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
 			this.Text = "fiche_inter";
@@ -402,6 +547,8 @@
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
 			((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+			((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
 			this.ResumeLayout(false);
 			this.PerformLayout();
 
@@ -433,5 +580,14 @@
 		private System.Windows.Forms.TextBox txt_Date;
 		private System.Windows.Forms.ComboBox comboBox1;
 		private System.Windows.Forms.Label label9;
+		private System.Windows.Forms.Button btn_Update;
+		private System.Windows.Forms.Button button1;
+		private System.Windows.Forms.Label label10;
+		private System.Windows.Forms.PictureBox pictureBox9;
+		private System.Windows.Forms.TextBox textBox2;
+		private System.Windows.Forms.Button button2;
+		private System.Windows.Forms.Button btn_Delete;
+		private System.Windows.Forms.PictureBox pictureBox5;
+		private System.Windows.Forms.Label label11;
 	}
 }
