@@ -409,12 +409,12 @@
             "Version_parc",
             "Os_parc",
             "Solution_parc"});
-            this.comboBox1.Location = new System.Drawing.Point(635, 64);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(138, 32);
-            this.comboBox1.TabIndex = 44;
-            this.comboBox1.Text = " Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret" +
+			this.comboBox1.Location = new System.Drawing.Point(847, 79);
+			this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+			this.comboBox1.Name = "comboBox1";
+			this.comboBox1.Size = new System.Drawing.Size(183, 37);
+			this.comboBox1.TabIndex = 44;
+			this.comboBox1.Text = " Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret" +
     " ";
             // 
             // btn_Update
