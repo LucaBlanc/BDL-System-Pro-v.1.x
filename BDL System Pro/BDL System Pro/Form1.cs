@@ -23,14 +23,18 @@ namespace BDL_System_Pro
 		MySqlCommand command;
 		MySqlDataAdapter adapter;
 		DataTable table;
-		int code_client = 0;
 
 
 		public clients()
 		{
 			InitializeComponent();
 			Getbdd();
-        }
+		}
+		
+		public class client
+		{
+			public static long code_client = 0;
+		}
 
 		private void Form1_Load(object sender, EventArgs e)
 		{
@@ -153,7 +157,7 @@ namespace BDL_System_Pro
 		{
 			//connection.Open();
 			DataTable dt = new DataTable();
-			adapter = new MySqlDataAdapter("Select * From clients", connection);
+			adapter = new MySqlDataAdapter("Select Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret,Web,code_client From clients", connection);
 			adapter.Fill(dt);
 			BdlDataGridView1.DataSource = dt;
 			connection.Close();
@@ -175,7 +179,7 @@ namespace BDL_System_Pro
 			txt_Gsm.Text = "";
 			txt_Fix.Text = "";
 			txt_Mail.Text = "";
-			code_client = 0;
+			client.code_client = 0;
 
 		}
 
@@ -193,17 +197,17 @@ namespace BDL_System_Pro
 			txt_Gsm2.Text = "";
 			txt_Fix2.Text = "";
 			txt_Mail2.Text = "";
-			code_client = 0;
+			client.code_client = 0;
 		}
 
 
 		private void btn_Update_Click_1(object sender, EventArgs e)
 		{
-			if (code_client != 0)
+			if (client.code_client != 0)
 			{
 				command = new MySqlCommand("update clients set Nom = @nom , Maintenance = @maint, DateMaintenance = @date, Adresse = @adr,Cp = @cp,Ville = @ville, Gsm = @gsm, Fixe = @fixe,Responsable = @resp , Mail = @mail, Siret = @siret, Web = @web where code_client  = @id", connection);
 				connection.Open();
-				command.Parameters.AddWithValue("@id", code_client);
+				command.Parameters.AddWithValue("@id", client.code_client);
 				command.Parameters.AddWithValue("@nom", textBox1.Text);
 				command.Parameters.AddWithValue("@maint", txt_Maint.Text);
 				command.Parameters.AddWithValue("@date", txt_Date.Text);
@@ -228,36 +232,27 @@ namespace BDL_System_Pro
 		}
 		private void btn_Delete_Click_1(object sender, EventArgs e)
 		{
-			if (code_client != 0)
-			{
-				connection.Open();
-				command = new MySqlCommand("DELETE FROM clients WHERE code_client = '" + code_client + "'", connection);
-				command.ExecuteReader();
-				//command.Parameters.AddWithValue("@id", code_client);
-				connection.Close();
-				DisplayData();
-				this.btn_Delete.Visible = false;
-				this.pictureBox5.Visible = false;
-				this.label6.Visible = false;
-				this.textBox2.Visible = false;
-				this.button2.Visible = false;
-				this.btn_Delete.Visible = false;
-				this.pictureBox9.Visible = false;
-				this.button3.Visible = false;
-				ClearData();
-
-
-			}
-			else
-			{
-				MessageBox.Show("Selectionner une ligne a supprimer");
-			}
+			connection.Open();
+			command = new MySqlCommand("DELETE FROM clients WHERE code_client = '" + client.code_client + "'", connection);
+			command.ExecuteReader();
+			connection.Close();
+			DisplayData();
+			this.button3.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox5.Visible = false;
+			this.label6.Visible = false;
+			this.textBox2.Visible = false;
+			this.button2.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox9.Visible = false;
+			ClearData();
+			ClearData2();
 		}
 
 
 		private void button3_Click_1(object sender, EventArgs e)
 		{
-			if (code_client != 0)
+			if (client.code_client != 0)
 			{
 				this.btn_Delete.Visible = true;
 				this.pictureBox5.Visible = true;
@@ -274,7 +269,8 @@ namespace BDL_System_Pro
 
 		private void BdlDataGridView1_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
 		{
-            //this.button3.Visible = true;
+			this.button3.Visible = true;
+			client.code_client = Convert.ToInt64(BdlDataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
 			textBox1.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 			textBox2.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString();
 			this.textBox1.Visible = true;
@@ -553,6 +549,11 @@ namespace BDL_System_Pro
 		}
 
 		private void pictureBox10_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void BdlDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
 		{
 
 		}
