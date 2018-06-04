@@ -88,14 +88,19 @@ namespace BDL_System_Pro
 
         private void BdlDataGridView2_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
+            this.button3.Visible = true;
             id_parc = Convert.ToInt32(BdlDataGridView2.Rows[e.RowIndex].Cells[0].Value.ToString());
-            txt_Type.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txt_Marque.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
-            txt_Model.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
-            txt_Version.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
-            txt_Os.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
-            txt_Solution.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
-            txt_Acs.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
+            this.textBox1.Visible = true;
+            textBox1.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            textBox2.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
+            txt_Type.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            txt_Nserie.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
+            txt_Marque.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
+            txt_Model.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
+            txt_Version.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[6].Value.ToString();
+            txt_Os.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[7].Value.ToString();
+            txt_Solution.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[8].Value.ToString();
+            txt_Acs.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[9].Value.ToString();
             connection.Close();
         }
 
@@ -143,6 +148,8 @@ namespace BDL_System_Pro
         {
             if (id_parc != 0)
             {
+                this.button3.Visible = false;
+                this.pictureBox9.Visible = true;
                 this.btn_Delete.Visible = true;
                 this.pictureBox5.Visible = true;
                 this.label6.Visible = true;
@@ -171,6 +178,7 @@ namespace BDL_System_Pro
                 this.textBox2.Visible = false;
                 this.button2.Visible = false;
                 this.btn_Delete.Visible = false;
+                this.pictureBox9.Visible = false;
                 ClearData();
 
 
@@ -189,6 +197,7 @@ namespace BDL_System_Pro
             this.textBox2.Visible = false;
             this.button2.Visible = false;
             this.btn_Delete.Visible = false;
+            this.pictureBox9.Visible = false;
         }
 
         private void btn_Insert_Click(object sender, EventArgs e)
@@ -277,6 +286,7 @@ namespace BDL_System_Pro
         private void button4_Click(object sender, EventArgs e)
         {
             this.pictureBox6.Visible = false;
+            this.pictureBox10.Visible = false;
             this.label9.Visible = false;
             this.btn_New.Visible = false;
             this.button4.Visible = false;

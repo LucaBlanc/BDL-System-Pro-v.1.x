@@ -139,7 +139,6 @@
             this.BdlDataGridView2.RowTemplate.Height = 24;
             this.BdlDataGridView2.Size = new System.Drawing.Size(923, 514);
             this.BdlDataGridView2.TabIndex = 5;
-            this.BdlDataGridView2.Visible = false;
             this.BdlDataGridView2.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.BdlDataGridView2_RowHeaderMouseClick);
             // 
             // label1
@@ -438,7 +437,7 @@
             this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBox1.Font = new System.Drawing.Font("Raleway", 14F);
             this.textBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-            this.textBox1.Location = new System.Drawing.Point(943, 38);
+            this.textBox1.Location = new System.Drawing.Point(943, 22);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(238, 22);
@@ -453,12 +452,13 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-            this.button3.Location = new System.Drawing.Point(1002, 66);
+            this.button3.Location = new System.Drawing.Point(1002, 54);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(119, 32);
             this.button3.TabIndex = 47;
             this.button3.Text = "SUPPRIMER";
             this.button3.UseVisualStyleBackColor = false;
+            this.button3.Visible = false;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
@@ -843,12 +843,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 609);
+            this.Controls.Add(this.label6);
+            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.txt_client);
             this.Controls.Add(this.txt_Nserie);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox10);
             this.Controls.Add(this.txt_Date2);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label17);
@@ -867,7 +868,6 @@
             this.Controls.Add(this.txt_Model2);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.btn_New);
-            this.Controls.Add(this.textBox2);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_Delete);
             this.Controls.Add(this.button3);
