@@ -177,7 +177,7 @@
 			this.BTN_Rech.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.BTN_Rech.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.BTN_Rech.Location = new System.Drawing.Point(1091, 18);
-			this.BTN_Rech.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.BTN_Rech.Margin = new System.Windows.Forms.Padding(4);
 			this.BTN_Rech.Name = "BTN_Rech";
 			this.BTN_Rech.Size = new System.Drawing.Size(117, 33);
 			this.BTN_Rech.TabIndex = 80;
@@ -192,7 +192,7 @@
 			this.textBoxRech.Font = new System.Drawing.Font("Raleway", 16.8F);
 			this.textBoxRech.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.textBoxRech.Location = new System.Drawing.Point(836, 18);
-			this.textBoxRech.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.textBoxRech.Margin = new System.Windows.Forms.Padding(4);
 			this.textBoxRech.Name = "textBoxRech";
 			this.textBoxRech.Size = new System.Drawing.Size(253, 33);
 			this.textBoxRech.TabIndex = 90;
@@ -206,8 +206,8 @@
 			this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btn_Insert.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_Insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.btn_Insert.Location = new System.Drawing.Point(1027, 73);
-			this.btn_Insert.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_Insert.Location = new System.Drawing.Point(1027, 62);
+			this.btn_Insert.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_Insert.Name = "btn_Insert";
 			this.btn_Insert.Size = new System.Drawing.Size(181, 39);
 			this.btn_Insert.TabIndex = 100;
@@ -252,7 +252,7 @@
 			this.btn_Update.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.btn_Update.Location = new System.Drawing.Point(1233, 705);
-			this.btn_Update.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_Update.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_Update.Name = "btn_Update";
 			this.btn_Update.Size = new System.Drawing.Size(184, 38);
 			this.btn_Update.TabIndex = 140;
@@ -267,12 +267,13 @@
 			this.button3.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.button3.Location = new System.Drawing.Point(1333, 62);
-			this.button3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button3.Margin = new System.Windows.Forms.Padding(4);
 			this.button3.Name = "button3";
 			this.button3.Size = new System.Drawing.Size(159, 39);
 			this.button3.TabIndex = 140;
 			this.button3.Text = "SUPPRIMER";
 			this.button3.UseVisualStyleBackColor = false;
+			this.button3.Visible = false;
 			this.button3.Click += new System.EventHandler(this.button3_Click_1);
 			// 
 			// btn_Delete
@@ -281,8 +282,8 @@
 			this.btn_Delete.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.btn_Delete.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_Delete.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.btn_Delete.Location = new System.Drawing.Point(28, 316);
-			this.btn_Delete.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_Delete.Location = new System.Drawing.Point(27, 316);
+			this.btn_Delete.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_Delete.Name = "btn_Delete";
 			this.btn_Delete.Size = new System.Drawing.Size(253, 39);
 			this.btn_Delete.TabIndex = 14;
@@ -299,7 +300,7 @@
 			this.txt_Maint.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Maint.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Maint.Location = new System.Drawing.Point(1272, 143);
-			this.txt_Maint.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Maint.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Maint.Name = "txt_Maint";
 			this.txt_Maint.Size = new System.Drawing.Size(288, 27);
 			this.txt_Maint.TabIndex = 15;
@@ -313,7 +314,7 @@
 			this.txt_Date2.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Date2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.txt_Date2.Location = new System.Drawing.Point(1440, 705);
-			this.txt_Date2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Date2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Date2.Name = "txt_Date2";
 			this.txt_Date2.Size = new System.Drawing.Size(155, 38);
 			this.txt_Date2.TabIndex = 16;
@@ -354,7 +355,7 @@
 			this.txt_Date.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Date.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Date.Location = new System.Drawing.Point(1272, 196);
-			this.txt_Date.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Date.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Date.Name = "txt_Date";
 			this.txt_Date.Size = new System.Drawing.Size(288, 27);
 			this.txt_Date.TabIndex = 18;
@@ -380,7 +381,7 @@
 			this.txt_CP.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_CP.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_CP.Location = new System.Drawing.Point(1272, 305);
-			this.txt_CP.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_CP.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_CP.Name = "txt_CP";
 			this.txt_CP.Size = new System.Drawing.Size(288, 27);
 			this.txt_CP.TabIndex = 22;
@@ -406,7 +407,7 @@
 			this.txt_Adr.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Adr.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Adr.Location = new System.Drawing.Point(1272, 251);
-			this.txt_Adr.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Adr.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Adr.Name = "txt_Adr";
 			this.txt_Adr.Size = new System.Drawing.Size(288, 27);
 			this.txt_Adr.TabIndex = 20;
@@ -432,7 +433,7 @@
 			this.txt_Gsm.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Gsm.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Gsm.Location = new System.Drawing.Point(1272, 410);
-			this.txt_Gsm.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Gsm.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Gsm.Name = "txt_Gsm";
 			this.txt_Gsm.Size = new System.Drawing.Size(288, 27);
 			this.txt_Gsm.TabIndex = 26;
@@ -458,7 +459,7 @@
 			this.txt_Ville.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Ville.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Ville.Location = new System.Drawing.Point(1272, 358);
-			this.txt_Ville.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Ville.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Ville.Name = "txt_Ville";
 			this.txt_Ville.Size = new System.Drawing.Size(288, 27);
 			this.txt_Ville.TabIndex = 24;
@@ -484,7 +485,7 @@
 			this.txt_Web.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Web.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Web.Location = new System.Drawing.Point(1272, 673);
-			this.txt_Web.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Web.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Web.Name = "txt_Web";
 			this.txt_Web.Size = new System.Drawing.Size(288, 27);
 			this.txt_Web.TabIndex = 36;
@@ -510,7 +511,7 @@
 			this.txt_Siret.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Siret.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Siret.Location = new System.Drawing.Point(1272, 621);
-			this.txt_Siret.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Siret.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Siret.Name = "txt_Siret";
 			this.txt_Siret.Size = new System.Drawing.Size(288, 27);
 			this.txt_Siret.TabIndex = 34;
@@ -536,7 +537,7 @@
 			this.txt_Mail.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Mail.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Mail.Location = new System.Drawing.Point(1272, 568);
-			this.txt_Mail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Mail.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Mail.Name = "txt_Mail";
 			this.txt_Mail.Size = new System.Drawing.Size(288, 27);
 			this.txt_Mail.TabIndex = 32;
@@ -562,7 +563,7 @@
 			this.txt_Resp.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Resp.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Resp.Location = new System.Drawing.Point(1272, 515);
-			this.txt_Resp.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Resp.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Resp.Name = "txt_Resp";
 			this.txt_Resp.Size = new System.Drawing.Size(288, 27);
 			this.txt_Resp.TabIndex = 30;
@@ -588,7 +589,7 @@
 			this.txt_Fix.Font = new System.Drawing.Font("Raleway", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Fix.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Fix.Location = new System.Drawing.Point(1272, 462);
-			this.txt_Fix.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Fix.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Fix.Name = "txt_Fix";
 			this.txt_Fix.Size = new System.Drawing.Size(288, 27);
 			this.txt_Fix.TabIndex = 28;
@@ -601,7 +602,7 @@
 			this.button2.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.button2.Location = new System.Drawing.Point(317, 316);
-			this.button2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button2.Margin = new System.Windows.Forms.Padding(4);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(147, 39);
 			this.button2.TabIndex = 38;
@@ -647,7 +648,7 @@
 			this.button4.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.button4.Location = new System.Drawing.Point(777, 598);
-			this.button4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.button4.Margin = new System.Windows.Forms.Padding(4);
 			this.button4.Name = "button4";
 			this.button4.Size = new System.Drawing.Size(253, 39);
 			this.button4.TabIndex = 14;
@@ -676,7 +677,7 @@
 			this.btn_New.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.btn_New.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
 			this.btn_New.Location = new System.Drawing.Point(503, 598);
-			this.btn_New.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.btn_New.Margin = new System.Windows.Forms.Padding(4);
 			this.btn_New.Name = "btn_New";
 			this.btn_New.Size = new System.Drawing.Size(253, 39);
 			this.btn_New.TabIndex = 13;
@@ -692,7 +693,7 @@
 			this.txt_Maint2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Maint2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Maint2.Location = new System.Drawing.Point(503, 305);
-			this.txt_Maint2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Maint2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Maint2.Name = "txt_Maint2";
 			this.txt_Maint2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Maint2.TabIndex = 2;
@@ -721,7 +722,7 @@
 			this.txt_Dat2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Dat2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Dat2.Location = new System.Drawing.Point(503, 363);
-			this.txt_Dat2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Dat2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Dat2.Name = "txt_Dat2";
 			this.txt_Dat2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Dat2.TabIndex = 3;
@@ -748,7 +749,7 @@
 			this.txt_Adr2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Adr2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Adr2.Location = new System.Drawing.Point(503, 421);
-			this.txt_Adr2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Adr2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Adr2.Name = "txt_Adr2";
 			this.txt_Adr2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Adr2.TabIndex = 4;
@@ -775,7 +776,7 @@
 			this.txt_Cp2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Cp2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Cp2.Location = new System.Drawing.Point(503, 479);
-			this.txt_Cp2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Cp2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Cp2.Name = "txt_Cp2";
 			this.txt_Cp2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Cp2.TabIndex = 5;
@@ -802,7 +803,7 @@
 			this.txt_Ville2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Ville2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Ville2.Location = new System.Drawing.Point(503, 537);
-			this.txt_Ville2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Ville2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Ville2.Name = "txt_Ville2";
 			this.txt_Ville2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Ville2.TabIndex = 6;
@@ -842,7 +843,7 @@
 			this.txt_Nom2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Nom2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Nom2.Location = new System.Drawing.Point(503, 246);
-			this.txt_Nom2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Nom2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Nom2.Name = "txt_Nom2";
 			this.txt_Nom2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Nom2.TabIndex = 1;
@@ -869,7 +870,7 @@
 			this.txt_Gsm2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Gsm2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Gsm2.Location = new System.Drawing.Point(779, 246);
-			this.txt_Gsm2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Gsm2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Gsm2.Name = "txt_Gsm2";
 			this.txt_Gsm2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Gsm2.TabIndex = 7;
@@ -896,7 +897,7 @@
 			this.txt_Web2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Web2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Web2.Location = new System.Drawing.Point(779, 538);
-			this.txt_Web2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Web2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Web2.Name = "txt_Web2";
 			this.txt_Web2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Web2.TabIndex = 12;
@@ -923,7 +924,7 @@
 			this.txt_Siret2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Siret2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Siret2.Location = new System.Drawing.Point(779, 480);
-			this.txt_Siret2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Siret2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Siret2.Name = "txt_Siret2";
 			this.txt_Siret2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Siret2.TabIndex = 11;
@@ -950,7 +951,7 @@
 			this.txt_Mail2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Mail2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Mail2.Location = new System.Drawing.Point(779, 422);
-			this.txt_Mail2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Mail2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Mail2.Name = "txt_Mail2";
 			this.txt_Mail2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Mail2.TabIndex = 10;
@@ -977,7 +978,7 @@
 			this.txt_Resp2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Resp2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Resp2.Location = new System.Drawing.Point(779, 364);
-			this.txt_Resp2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Resp2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Resp2.Name = "txt_Resp2";
 			this.txt_Resp2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Resp2.TabIndex = 9;
@@ -1004,7 +1005,7 @@
 			this.txt_Fix2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.txt_Fix2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
 			this.txt_Fix2.Location = new System.Drawing.Point(779, 306);
-			this.txt_Fix2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+			this.txt_Fix2.Margin = new System.Windows.Forms.Padding(4);
 			this.txt_Fix2.Name = "txt_Fix2";
 			this.txt_Fix2.Size = new System.Drawing.Size(251, 33);
 			this.txt_Fix2.TabIndex = 8;
