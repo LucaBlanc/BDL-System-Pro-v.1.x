@@ -68,7 +68,6 @@
             this.label26 = new System.Windows.Forms.Label();
             this.txt_Version2 = new System.Windows.Forms.TextBox();
             this.label20 = new System.Windows.Forms.Label();
-            this.txt_Type2 = new System.Windows.Forms.TextBox();
             this.txt_Acs2 = new System.Windows.Forms.TextBox();
             this.label16 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -81,9 +80,13 @@
             this.label17 = new System.Windows.Forms.Label();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
             this.pictureBox10 = new System.Windows.Forms.PictureBox();
-            this.txt_Date2 = new System.Windows.Forms.Button();
             this.txt_Nserie = new System.Windows.Forms.TextBox();
-            this.txt_client = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.comboBox2 = new System.Windows.Forms.ComboBox();
+            this.txt_Serie = new System.Windows.Forms.TextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.comboBox3 = new System.Windows.Forms.ComboBox();
+            this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -209,10 +212,10 @@
             this.txt_Acs.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Acs.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Acs.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Acs.Location = new System.Drawing.Point(955, 447);
+            this.txt_Acs.Location = new System.Drawing.Point(955, 461);
             this.txt_Acs.Multiline = true;
             this.txt_Acs.Name = "txt_Acs";
-            this.txt_Acs.Size = new System.Drawing.Size(216, 103);
+            this.txt_Acs.Size = new System.Drawing.Size(216, 88);
             this.txt_Acs.TabIndex = 35;
             this.txt_Acs.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -222,7 +225,7 @@
             this.txt_Solution.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Solution.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Solution.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Solution.Location = new System.Drawing.Point(955, 394);
+            this.txt_Solution.Location = new System.Drawing.Point(955, 413);
             this.txt_Solution.Name = "txt_Solution";
             this.txt_Solution.Size = new System.Drawing.Size(216, 28);
             this.txt_Solution.TabIndex = 34;
@@ -234,7 +237,7 @@
             this.txt_Os.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Os.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Os.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Os.Location = new System.Drawing.Point(955, 342);
+            this.txt_Os.Location = new System.Drawing.Point(955, 365);
             this.txt_Os.Name = "txt_Os";
             this.txt_Os.Size = new System.Drawing.Size(216, 28);
             this.txt_Os.TabIndex = 33;
@@ -246,7 +249,7 @@
             this.txt_Version.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Version.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Version.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Version.Location = new System.Drawing.Point(955, 290);
+            this.txt_Version.Location = new System.Drawing.Point(955, 318);
             this.txt_Version.Name = "txt_Version";
             this.txt_Version.Size = new System.Drawing.Size(216, 28);
             this.txt_Version.TabIndex = 32;
@@ -258,7 +261,7 @@
             this.txt_Model.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Model.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Model.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Model.Location = new System.Drawing.Point(955, 235);
+            this.txt_Model.Location = new System.Drawing.Point(955, 270);
             this.txt_Model.Name = "txt_Model";
             this.txt_Model.Size = new System.Drawing.Size(216, 28);
             this.txt_Model.TabIndex = 31;
@@ -270,7 +273,7 @@
             this.txt_Marque.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Marque.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Marque.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Marque.Location = new System.Drawing.Point(955, 181);
+            this.txt_Marque.Location = new System.Drawing.Point(955, 221);
             this.txt_Marque.Name = "txt_Marque";
             this.txt_Marque.Size = new System.Drawing.Size(216, 28);
             this.txt_Marque.TabIndex = 30;
@@ -282,7 +285,7 @@
             this.txt_Type.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Type.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Type.Location = new System.Drawing.Point(955, 126);
+            this.txt_Type.Location = new System.Drawing.Point(955, 120);
             this.txt_Type.Name = "txt_Type";
             this.txt_Type.Size = new System.Drawing.Size(216, 28);
             this.txt_Type.TabIndex = 29;
@@ -294,7 +297,7 @@
             this.label14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label14.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label14.Location = new System.Drawing.Point(1009, 428);
+            this.label14.Location = new System.Drawing.Point(1009, 442);
             this.label14.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(115, 17);
@@ -307,7 +310,7 @@
             this.label7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label7.Location = new System.Drawing.Point(1021, 375);
+            this.label7.Location = new System.Drawing.Point(1021, 394);
             this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(87, 17);
@@ -320,7 +323,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label8.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label8.Location = new System.Drawing.Point(1046, 323);
+            this.label8.Location = new System.Drawing.Point(1046, 346);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(30, 17);
@@ -333,7 +336,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label5.Location = new System.Drawing.Point(1027, 271);
+            this.label5.Location = new System.Drawing.Point(1026, 299);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 17);
@@ -346,7 +349,7 @@
             this.ADRESSE.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.ADRESSE.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.ADRESSE.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.ADRESSE.Location = new System.Drawing.Point(1033, 216);
+            this.ADRESSE.Location = new System.Drawing.Point(1032, 251);
             this.ADRESSE.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.ADRESSE.Name = "ADRESSE";
             this.ADRESSE.Size = new System.Drawing.Size(62, 17);
@@ -359,7 +362,7 @@
             this.label4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label4.Location = new System.Drawing.Point(1027, 162);
+            this.label4.Location = new System.Drawing.Point(1026, 202);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(74, 17);
@@ -372,7 +375,7 @@
             this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label3.Location = new System.Drawing.Point(1036, 107);
+            this.label3.Location = new System.Drawing.Point(1036, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 17);
@@ -409,12 +412,12 @@
             "Version_parc",
             "Os_parc",
             "Solution_parc"});
-			this.comboBox1.Location = new System.Drawing.Point(847, 79);
-			this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-			this.comboBox1.Name = "comboBox1";
-			this.comboBox1.Size = new System.Drawing.Size(183, 37);
-			this.comboBox1.TabIndex = 44;
-			this.comboBox1.Text = " Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret" +
+            this.comboBox1.Location = new System.Drawing.Point(626, 61);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(149, 32);
+            this.comboBox1.TabIndex = 44;
+            this.comboBox1.Text = " Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret" +
     " ";
             // 
             // btn_Update
@@ -423,7 +426,7 @@
             this.btn_Update.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btn_Update.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Update.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-            this.btn_Update.Location = new System.Drawing.Point(927, 565);
+            this.btn_Update.Location = new System.Drawing.Point(998, 565);
             this.btn_Update.Name = "btn_Update";
             this.btn_Update.Size = new System.Drawing.Size(138, 32);
             this.btn_Update.TabIndex = 45;
@@ -539,7 +542,7 @@
             this.label21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label21.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label21.Location = new System.Drawing.Point(632, 181);
+            this.label21.Location = new System.Drawing.Point(435, 326);
             this.label21.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label21.Name = "label21";
             this.label21.Size = new System.Drawing.Size(74, 17);
@@ -553,7 +556,7 @@
             this.txt_Marque2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Marque2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Marque2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Marque2.Location = new System.Drawing.Point(583, 200);
+            this.txt_Marque2.Location = new System.Drawing.Point(379, 345);
             this.txt_Marque2.Name = "txt_Marque2";
             this.txt_Marque2.Size = new System.Drawing.Size(188, 28);
             this.txt_Marque2.TabIndex = 84;
@@ -566,7 +569,7 @@
             this.label25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label25.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label25.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label25.Location = new System.Drawing.Point(631, 275);
+            this.label25.Location = new System.Drawing.Point(630, 277);
             this.label25.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(87, 17);
@@ -580,12 +583,13 @@
             this.txt_Solution2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Solution2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Solution2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Solution2.Location = new System.Drawing.Point(583, 294);
+            this.txt_Solution2.Location = new System.Drawing.Point(583, 295);
             this.txt_Solution2.Name = "txt_Solution2";
             this.txt_Solution2.Size = new System.Drawing.Size(188, 28);
             this.txt_Solution2.TabIndex = 76;
             this.txt_Solution2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Solution2.Visible = false;
+            this.txt_Solution2.TextChanged += new System.EventHandler(this.txt_Solution2_TextChanged);
             // 
             // label26
             // 
@@ -607,7 +611,7 @@
             this.txt_Version2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Version2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Version2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Version2.Location = new System.Drawing.Point(586, 247);
+            this.txt_Version2.Location = new System.Drawing.Point(583, 248);
             this.txt_Version2.Name = "txt_Version2";
             this.txt_Version2.Size = new System.Drawing.Size(188, 28);
             this.txt_Version2.TabIndex = 74;
@@ -628,29 +632,16 @@
             this.label20.Text = "TYPE";
             this.label20.Visible = false;
             // 
-            // txt_Type2
-            // 
-            this.txt_Type2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
-            this.txt_Type2.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_Type2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Type2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Type2.Location = new System.Drawing.Point(377, 200);
-            this.txt_Type2.Name = "txt_Type2";
-            this.txt_Type2.Size = new System.Drawing.Size(188, 28);
-            this.txt_Type2.TabIndex = 72;
-            this.txt_Type2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.txt_Type2.Visible = false;
-            // 
             // txt_Acs2
             // 
             this.txt_Acs2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
             this.txt_Acs2.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Acs2.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Acs2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Acs2.Location = new System.Drawing.Point(377, 355);
+            this.txt_Acs2.Location = new System.Drawing.Point(377, 394);
             this.txt_Acs2.Multiline = true;
             this.txt_Acs2.Name = "txt_Acs2";
-            this.txt_Acs2.Size = new System.Drawing.Size(394, 89);
+            this.txt_Acs2.Size = new System.Drawing.Size(394, 50);
             this.txt_Acs2.TabIndex = 63;
             this.txt_Acs2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Acs2.Visible = false;
@@ -695,6 +686,7 @@
             this.txt_Model2.TabIndex = 60;
             this.txt_Model2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txt_Model2.Visible = false;
+            this.txt_Model2.TextChanged += new System.EventHandler(this.txt_Model2_TextChanged);
             // 
             // button4
             // 
@@ -720,9 +712,9 @@
             this.label9.Location = new System.Drawing.Point(471, 126);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(225, 17);
+            this.label9.Size = new System.Drawing.Size(240, 17);
             this.label9.TabIndex = 71;
-            this.label9.Text = "AJOUTER UNE FICHE CLIENT";
+            this.label9.Text = "AJOUTER UNE FICHE PRODUIT";
             this.label9.Visible = false;
             // 
             // btn_New
@@ -771,13 +763,14 @@
             this.label17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
             this.label17.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.label17.Location = new System.Drawing.Point(513, 336);
+            this.label17.Location = new System.Drawing.Point(518, 375);
             this.label17.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label17.Name = "label17";
             this.label17.Size = new System.Drawing.Size(115, 17);
             this.label17.TabIndex = 87;
             this.label17.Text = "ACCESSOIRES";
             this.label17.Visible = false;
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // pictureBox9
             // 
@@ -801,67 +794,121 @@
             this.pictureBox10.TabStop = false;
             this.pictureBox10.Visible = false;
             // 
-            // txt_Date2
-            // 
-            this.txt_Date2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Date2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.txt_Date2.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Date2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-            this.txt_Date2.Location = new System.Drawing.Point(1091, 566);
-            this.txt_Date2.Name = "txt_Date2";
-            this.txt_Date2.Size = new System.Drawing.Size(116, 31);
-            this.txt_Date2.TabIndex = 90;
-            this.txt_Date2.Text = "INTERVENTION";
-            this.txt_Date2.UseVisualStyleBackColor = false;
-            // 
             // txt_Nserie
             // 
             this.txt_Nserie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
             this.txt_Nserie.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.txt_Nserie.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txt_Nserie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Nserie.Location = new System.Drawing.Point(677, 569);
+            this.txt_Nserie.Location = new System.Drawing.Point(955, 169);
             this.txt_Nserie.Name = "txt_Nserie";
             this.txt_Nserie.Size = new System.Drawing.Size(216, 28);
             this.txt_Nserie.TabIndex = 91;
             this.txt_Nserie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txt_client
+            // label10
             // 
-            this.txt_client.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
-            this.txt_client.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_client.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_client.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_client.Location = new System.Drawing.Point(448, 569);
-            this.txt_client.Name = "txt_client";
-            this.txt_client.Size = new System.Drawing.Size(216, 28);
-            this.txt_client.TabIndex = 92;
-            this.txt_client.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.label10.AutoSize = true;
+            this.label10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label10.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.label10.Location = new System.Drawing.Point(1030, 150);
+            this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(64, 17);
+            this.label10.TabIndex = 93;
+            this.label10.Text = "N°Serie";
+            // 
+            // comboBox2
+            // 
+            this.comboBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
+            this.comboBox2.FormattingEnabled = true;
+            this.comboBox2.Items.AddRange(new object[] {
+            "Caisse",
+            "TPE"});
+            this.comboBox2.Location = new System.Drawing.Point(377, 200);
+            this.comboBox2.Name = "comboBox2";
+            this.comboBox2.Size = new System.Drawing.Size(188, 21);
+            this.comboBox2.TabIndex = 94;
+            this.comboBox2.Visible = false;
+            // 
+            // txt_Serie
+            // 
+            this.txt_Serie.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
+            this.txt_Serie.Cursor = System.Windows.Forms.Cursors.Arrow;
+            this.txt_Serie.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_Serie.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.txt_Serie.Location = new System.Drawing.Point(583, 345);
+            this.txt_Serie.Name = "txt_Serie";
+            this.txt_Serie.Size = new System.Drawing.Size(188, 28);
+            this.txt_Serie.TabIndex = 84;
+            this.txt_Serie.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txt_Serie.Visible = false;
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.label11.Location = new System.Drawing.Point(639, 326);
+            this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(64, 17);
+            this.label11.TabIndex = 95;
+            this.label11.Text = "N°Serie";
+            this.label11.Visible = false;
+            // 
+            // comboBox3
+            // 
+            this.comboBox3.FormattingEnabled = true;
+            this.comboBox3.Location = new System.Drawing.Point(583, 200);
+            this.comboBox3.Name = "comboBox3";
+            this.comboBox3.Size = new System.Drawing.Size(188, 21);
+            this.comboBox3.TabIndex = 96;
+            this.comboBox3.Visible = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold);
+            this.label12.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
+            this.label12.Location = new System.Drawing.Point(641, 180);
+            this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(62, 17);
+            this.label12.TabIndex = 97;
+            this.label12.Text = "CLIENT";
+            this.label12.Visible = false;
             // 
             // parc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 609);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.comboBox3);
+            this.Controls.Add(this.label11);
+            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.txt_client);
             this.Controls.Add(this.txt_Nserie);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.pictureBox10);
-            this.Controls.Add(this.txt_Date2);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label17);
             this.Controls.Add(this.txt_Os2);
             this.Controls.Add(this.label21);
+            this.Controls.Add(this.txt_Serie);
             this.Controls.Add(this.txt_Marque2);
             this.Controls.Add(this.label25);
             this.Controls.Add(this.txt_Solution2);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.txt_Version2);
             this.Controls.Add(this.label20);
-            this.Controls.Add(this.txt_Type2);
             this.Controls.Add(this.txt_Acs2);
             this.Controls.Add(this.label16);
             this.Controls.Add(this.label15);
@@ -958,7 +1005,6 @@
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.TextBox txt_Version2;
         private System.Windows.Forms.Label label20;
-        private System.Windows.Forms.TextBox txt_Type2;
         private System.Windows.Forms.TextBox txt_Acs2;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label15;
@@ -971,8 +1017,12 @@
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.PictureBox pictureBox9;
         private System.Windows.Forms.PictureBox pictureBox10;
-        private System.Windows.Forms.Button txt_Date2;
         private System.Windows.Forms.TextBox txt_Nserie;
-        private System.Windows.Forms.TextBox txt_client;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.TextBox txt_Serie;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.ComboBox comboBox3;
+        private System.Windows.Forms.Label label12;
     }
 }

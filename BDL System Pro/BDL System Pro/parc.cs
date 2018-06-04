@@ -124,7 +124,6 @@ namespace BDL_System_Pro
                 command = new MySqlCommand("update Parc set Categorie = @type , Marque = @marque, Model = @model, Version = @version, Os = @os, Solution = @solution, Accessoire = @acs, N_client = @ncli, Nserie = @serie where id_parc = @id", connection);
                 connection.Open();
                 command.Parameters.AddWithValue("@id", id_parc);
-                command.Parameters.AddWithValue("@ncli", txt_client.Text);
                 command.Parameters.AddWithValue("@serie", txt_Nserie.Text);
                 command.Parameters.AddWithValue("@type", txt_Type.Text);
                 command.Parameters.AddWithValue("@marque", txt_Marque.Text);
@@ -202,6 +201,7 @@ namespace BDL_System_Pro
 
         private void btn_Insert_Click(object sender, EventArgs e)
         {
+            txt_Serie.Visible = true;
             this.pictureBox6.Visible = true;
             this.label9.Visible = true;
             this.btn_New.Visible = true;
@@ -210,9 +210,11 @@ namespace BDL_System_Pro
             this.label21.Visible = true;
             this.label25.Visible = true;
             this.label15.Visible = true;
+            this.label11.Visible = true;
             this.label16.Visible = true;
             this.label17.Visible = true;
-            this.txt_Type2.Visible = true;
+            this.comboBox3.Visible = true;
+            this.comboBox2.Visible = true;
             this.pictureBox10.Visible = true; 
             txt_Model2.Visible = true;
             txt_Os2.Visible = true;
@@ -231,18 +233,19 @@ namespace BDL_System_Pro
             txt_Model2.Text = "";
             txt_Os2.Text = "";
             txt_Solution2.Text = "";
-            txt_Type2.Text = "";
+            comboBox2.SelectedItem = "";
             txt_Version2.Text = "";
         }
 
         private void btn_New_Click(object sender, EventArgs e)
         {
-            if (txt_Type2.Text != "")
+            if (comboBox2.Text != "")
             {
-                command = new MySqlCommand("insert into Parc(Type_parc, Marque_Parc, Model_Parc, Version_parc, Os_parc, Solution_parc, Accessoire_parc) values (@type, @marque, @model, @version, @os, @solution, @acs)", connection);
+                command = new MySqlCommand("insert into Parc(N_Client,Categorie,NSerie,Marque,Model,Version,Os,Solution,Accessoire) values (@ncli,@type,@serie, @marque, @model, @version, @os, @solution, @acs)", connection);
                 connection.Open();
-                command.Parameters.AddWithValue("@id", id_parc);
-                command.Parameters.AddWithValue("@type", txt_Type2.Text);
+                command.Parameters.AddWithValue("@ncli", comboBox3.SelectedItem);
+                command.Parameters.AddWithValue("@type", comboBox2.SelectedItem);
+                command.Parameters.AddWithValue("@serie", txt_Serie.Text);
                 command.Parameters.AddWithValue("@marque", txt_Marque2.Text);
                 command.Parameters.AddWithValue("@model", txt_Model2.Text);
                 command.Parameters.AddWithValue("@version", txt_Version2.Text);
@@ -264,15 +267,18 @@ namespace BDL_System_Pro
                 this.label15.Visible = false;
                 this.label16.Visible = false;
                 this.label17.Visible = false;
-                this.txt_Type2.Visible = false;
-                txt_Model2.Visible = true;
+                this.label11.Visible = false;
+                txt_Model2.Visible = false;
+                this.comboBox3.Visible = false;
                 txt_Os2.Visible = false;
                 txt_Acs2.Visible = false;
                 txt_Marque2.Visible = false;
                 txt_Version2.Visible = false;
                 txt_Solution2.Visible = false;
-                this.txt_Type2.Visible = false;
+                txt_Serie.Visible = false;
+                this.comboBox2.Visible = false;
                 label26.Visible = false;
+                this.pictureBox10.Visible = false;
                 ClearData2();
 
             }
@@ -287,18 +293,22 @@ namespace BDL_System_Pro
         {
             this.pictureBox6.Visible = false;
             this.pictureBox10.Visible = false;
+            this.comboBox3.Visible = false;
             this.label9.Visible = false;
             this.btn_New.Visible = false;
             this.button4.Visible = false;
+            this.label11.Visible = false;
             this.label20.Visible = false;
             this.label21.Visible = false;
             this.label25.Visible = false;
             this.label15.Visible = false;
             this.label16.Visible = false;
             this.label17.Visible = false;
-            this.txt_Type2.Visible = false;
+            this.comboBox2.Visible = false;
+            this.label11.Visible = false;
             txt_Model2.Visible = false;
             txt_Os2.Visible = false;
+            txt_Serie.Visible = false;
             txt_Acs2.Visible = false;
             txt_Marque2.Visible = false;
             txt_Version2.Visible = false;
@@ -308,6 +318,21 @@ namespace BDL_System_Pro
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Solution2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_Model2_TextChanged(object sender, EventArgs e)
         {
 
         }

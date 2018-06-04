@@ -142,7 +142,8 @@ namespace BDL_System_Pro
 			this.txt_Web2.Visible = true;
 			this.label26.Visible = true;
 			this.pictureBox10.Visible = true;
-		}
+
+        }
 
 		private void btn_Insert_Click_1(object sender, EventArgs e)
 		{
