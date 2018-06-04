@@ -75,7 +75,8 @@ namespace BDL_System_Pro
 			BdlDataGridView1.Columns[9].Width = 200;
 			BdlDataGridView1.Columns[10].Width = 130;
 			BdlDataGridView1.Columns[11].Width = 200;
-		}
+            BdlDataGridView1.Columns[12].Width = 200;
+        }
 
 
 		private void label2_Click(object sender, EventArgs e)
@@ -281,8 +282,9 @@ namespace BDL_System_Pro
 			txt_Mail.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[9].Value.ToString();
 			txt_Siret.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[10].Value.ToString();
 			txt_Web.Text = BdlDataGridView1.Rows[e.RowIndex].Cells[11].Value.ToString();
+            code_client = Convert.ToInt32(BdlDataGridView1.Rows[e.RowIndex].Cells[12].Value.ToString());
 
-			connection.Close();
+            connection.Close();
 		}
 
 		private void pictureBox1_Click(object sender, EventArgs e)
