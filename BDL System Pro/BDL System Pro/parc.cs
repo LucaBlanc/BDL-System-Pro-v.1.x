@@ -37,7 +37,7 @@ namespace BDL_System_Pro
 
             using (MySqlConnection con = new MySqlConnection(connString))
             {
-                using (MySqlCommand cmd = new MySqlCommand("SELECT id_parc,Type_parc,Marque_Parc,Model_Parc,Version_parc,Os_parc,Solution_parc,Accessoire_parc FROM Parc", con))
+                using (MySqlCommand cmd = new MySqlCommand("SELECT id_parc,N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire FROM Parc", con))
 
                 {
                     con.Open();
@@ -104,7 +104,7 @@ namespace BDL_System_Pro
 
         public void searchData(string valueToSearch)
         {
-            string query = "SELECT id_parc, Type_parc, Marque_Parc, Model_Parc, Version_parc, Os_parc, Solution_parc, Accessoire_parc FROM Parc WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
+            string query = "SELECT id_parc,N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire from Parc WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
             table = new DataTable();
@@ -116,9 +116,11 @@ namespace BDL_System_Pro
         {
             if (id_parc != 0)
             {
-                command = new MySqlCommand("update Parc set Type_Parc = @type , Marque_Parc = @marque, Model_Parc = @model, Version_parc = @version, Os_Parc = @os, Solution_parc = @solution, Accessoire_parc = @acs where id_parc = @id", connection);
+                command = new MySqlCommand("update Parc set Categorie = @type , Marque = @marque, Model = @model, Version = @version, Os = @os, Solution = @solution, Accessoire = @acs, N_client = @ncli, Nserie = @serie where id_parc = @id", connection);
                 connection.Open();
                 command.Parameters.AddWithValue("@id", id_parc);
+                command.Parameters.AddWithValue("@ncli", txt_client.Text);
+                command.Parameters.AddWithValue("@serie", txt_Nserie.Text);
                 command.Parameters.AddWithValue("@type", txt_Type.Text);
                 command.Parameters.AddWithValue("@marque", txt_Marque.Text);
                 command.Parameters.AddWithValue("@model", txt_Model.Text);
@@ -146,10 +148,11 @@ namespace BDL_System_Pro
                 this.label6.Visible = true;
                 this.textBox2.Visible = true;
                 this.button2.Visible = true;
+                this.textBox2.Visible = true;
             }
             else
             {
-                MessageBox.Show("Selectionner un client !");
+                MessageBox.Show("Selectionner une ligne !");
             }
         }
 
@@ -201,6 +204,7 @@ namespace BDL_System_Pro
             this.label16.Visible = true;
             this.label17.Visible = true;
             this.txt_Type2.Visible = true;
+            this.pictureBox10.Visible = true; 
             txt_Model2.Visible = true;
             txt_Os2.Visible = true;
             txt_Acs2.Visible = true;
@@ -258,6 +262,7 @@ namespace BDL_System_Pro
                 txt_Marque2.Visible = false;
                 txt_Version2.Visible = false;
                 txt_Solution2.Visible = false;
+                this.txt_Type2.Visible = false;
                 label26.Visible = false;
                 ClearData2();
 
@@ -290,6 +295,11 @@ namespace BDL_System_Pro
             txt_Solution2.Visible = false;
             label26.Visible = false;
             ClearData2();
+        }
+
+        private void pictureBox6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
