@@ -186,7 +186,7 @@
             this.textBoxRech.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxRech.Font = new System.Drawing.Font("Raleway", 16.8F);
             this.textBoxRech.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.textBoxRech.Location = new System.Drawing.Point(635, 28);
+            this.textBoxRech.Location = new System.Drawing.Point(628, 28);
             this.textBoxRech.Name = "textBoxRech";
             this.textBoxRech.Size = new System.Drawing.Size(190, 27);
             this.textBoxRech.TabIndex = 10;
@@ -374,13 +374,13 @@
             // 
             this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Insert.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Insert.Font = new System.Drawing.Font("Raleway", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-            this.btn_Insert.Location = new System.Drawing.Point(781, 64);
+            this.btn_Insert.Location = new System.Drawing.Point(781, 65);
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(136, 32);
             this.btn_Insert.TabIndex = 43;
-            this.btn_Insert.Text = "AJOUTER UN CLIENT";
+            this.btn_Insert.Text = "AJOUTER UN PRODUIT";
             this.btn_Insert.UseVisualStyleBackColor = false;
             this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
@@ -403,7 +403,7 @@
             "Solution",
             "Accessoire",
             "N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire"});
-            this.comboBox1.Location = new System.Drawing.Point(626, 61);
+            this.comboBox1.Location = new System.Drawing.Point(626, 65);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(149, 32);

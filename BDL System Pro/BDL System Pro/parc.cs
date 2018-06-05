@@ -85,7 +85,6 @@ namespace BDL_System_Pro
             {
                 MessageBox.Show(ex.Message);
             }
-            label1.Text = client.Nom_client;
         }
 
         private void ClearData()
