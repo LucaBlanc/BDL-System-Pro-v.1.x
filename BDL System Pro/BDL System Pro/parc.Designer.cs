@@ -43,7 +43,6 @@
             this.txt_Version = new System.Windows.Forms.TextBox();
             this.txt_Model = new System.Windows.Forms.TextBox();
             this.txt_Marque = new System.Windows.Forms.TextBox();
-            this.txt_Type = new System.Windows.Forms.TextBox();
             this.label14 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -87,6 +86,7 @@
             this.label11 = new System.Windows.Forms.Label();
             this.comboBox3 = new System.Windows.Forms.ComboBox();
             this.label12 = new System.Windows.Forms.Label();
+            this.comboBox4 = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -186,7 +186,7 @@
             this.textBoxRech.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.textBoxRech.Font = new System.Drawing.Font("Raleway", 16.8F);
             this.textBoxRech.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.textBoxRech.Location = new System.Drawing.Point(635, 28);
+            this.textBoxRech.Location = new System.Drawing.Point(628, 28);
             this.textBoxRech.Name = "textBoxRech";
             this.textBoxRech.Size = new System.Drawing.Size(190, 27);
             this.textBoxRech.TabIndex = 10;
@@ -279,18 +279,6 @@
             this.txt_Marque.TabIndex = 30;
             this.txt_Marque.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
-            // txt_Type
-            // 
-            this.txt_Type.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
-            this.txt_Type.Cursor = System.Windows.Forms.Cursors.Arrow;
-            this.txt_Type.Font = new System.Drawing.Font("Raleway", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txt_Type.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
-            this.txt_Type.Location = new System.Drawing.Point(955, 120);
-            this.txt_Type.Name = "txt_Type";
-            this.txt_Type.Size = new System.Drawing.Size(216, 28);
-            this.txt_Type.TabIndex = 29;
-            this.txt_Type.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
             // label14
             // 
             this.label14.AutoSize = true;
@@ -378,21 +366,21 @@
             this.label3.Location = new System.Drawing.Point(1036, 103);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 17);
+            this.label3.Size = new System.Drawing.Size(78, 17);
             this.label3.TabIndex = 36;
-            this.label3.Text = "TYPE";
+            this.label3.Text = "Categorie";
             // 
             // btn_Insert
             // 
             this.btn_Insert.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(48)))), ((int)(((byte)(48)))), ((int)(((byte)(48)))));
             this.btn_Insert.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_Insert.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_Insert.Font = new System.Drawing.Font("Raleway", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btn_Insert.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-            this.btn_Insert.Location = new System.Drawing.Point(781, 64);
+            this.btn_Insert.Location = new System.Drawing.Point(781, 65);
             this.btn_Insert.Name = "btn_Insert";
             this.btn_Insert.Size = new System.Drawing.Size(136, 32);
             this.btn_Insert.TabIndex = 43;
-            this.btn_Insert.Text = "AJOUTER UN CLIENT";
+            this.btn_Insert.Text = "AJOUTER UN PRODUIT";
             this.btn_Insert.UseVisualStyleBackColor = false;
             this.btn_Insert.Click += new System.EventHandler(this.btn_Insert_Click);
             // 
@@ -405,20 +393,22 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboBox1.Items.AddRange(new object[] {
-            "Type_parc,Marque_Parc,Model_Parc,Version_parc,Os_parc,Solution_parc",
-            "Type_parc",
-            "Marque_Parc",
-            "Model_Parc",
-            "Version_parc",
-            "Os_parc",
-            "Solution_parc"});
-            this.comboBox1.Location = new System.Drawing.Point(626, 61);
+            "N_client",
+            "Categorie",
+            "Nserie",
+            "Marque",
+            "Model",
+            "Version",
+            "Os",
+            "Solution",
+            "Accessoire",
+            "N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire"});
+            this.comboBox1.Location = new System.Drawing.Point(626, 65);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(149, 32);
             this.comboBox1.TabIndex = 44;
-            this.comboBox1.Text = " Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret" +
-    " ";
+            this.comboBox1.Text = " N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire";
             // 
             // btn_Update
             // 
@@ -861,6 +851,7 @@
             // 
             // comboBox3
             // 
+            this.comboBox3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
             this.comboBox3.FormattingEnabled = true;
             this.comboBox3.Location = new System.Drawing.Point(583, 200);
             this.comboBox3.Name = "comboBox3";
@@ -882,11 +873,24 @@
             this.label12.Text = "CLIENT";
             this.label12.Visible = false;
             // 
+            // comboBox4
+            // 
+            this.comboBox4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(246)))), ((int)(((byte)(229)))), ((int)(((byte)(141)))));
+            this.comboBox4.FormattingEnabled = true;
+            this.comboBox4.Items.AddRange(new object[] {
+            "Caisse",
+            "TPE"});
+            this.comboBox4.Location = new System.Drawing.Point(955, 126);
+            this.comboBox4.Name = "comboBox4";
+            this.comboBox4.Size = new System.Drawing.Size(216, 21);
+            this.comboBox4.TabIndex = 98;
+            // 
             // parc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1201, 609);
+            this.Controls.Add(this.comboBox4);
             this.Controls.Add(this.label12);
             this.Controls.Add(this.comboBox3);
             this.Controls.Add(this.label11);
@@ -934,7 +938,6 @@
             this.Controls.Add(this.txt_Version);
             this.Controls.Add(this.txt_Model);
             this.Controls.Add(this.txt_Marque);
-            this.Controls.Add(this.txt_Type);
             this.Controls.Add(this.BTN_Rech);
             this.Controls.Add(this.textBoxRech);
             this.Controls.Add(this.pictureBox4);
@@ -980,7 +983,6 @@
         private System.Windows.Forms.TextBox txt_Version;
         private System.Windows.Forms.TextBox txt_Model;
         private System.Windows.Forms.TextBox txt_Marque;
-        private System.Windows.Forms.TextBox txt_Type;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -1024,5 +1026,6 @@
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.ComboBox comboBox3;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.ComboBox comboBox4;
     }
 }

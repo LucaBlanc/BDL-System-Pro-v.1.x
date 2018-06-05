@@ -66,6 +66,25 @@ namespace BDL_System_Pro
         private void parc_Load(object sender, EventArgs e)
         {
             BdlDataGridView2.DataSource = Getbdd();
+            try
+            {
+                MySqlConnection connection = new MySqlConnection("server=bj881856-001.dbaas.ovh.net;user id=bdl; database=Bdl; port=35312; password=Bdl69100");
+                string selectQuery = "SELECT * from clients";
+                connection.Open();
+                MySqlCommand command = new MySqlCommand(selectQuery, connection);
+
+                MySqlDataReader reader = command.ExecuteReader();
+
+                while (reader.Read())
+                {
+                    comboBox3.Items.Add(reader.GetString("Nom"));
+                }
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void ClearData()
@@ -75,7 +94,8 @@ namespace BDL_System_Pro
             txt_Model.Text = "";
             txt_Os.Text = "";
             txt_Solution.Text = "";
-            txt_Type.Text = "";
+            txt_Nserie.Text = "";
+            comboBox4.Text = "";
             txt_Version.Text = "";
             id_parc = 0;
         }
@@ -93,7 +113,7 @@ namespace BDL_System_Pro
             this.textBox1.Visible = true;
             textBox1.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
             textBox2.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[1].Value.ToString();
-            txt_Type.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
+            comboBox4.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[2].Value.ToString();
             txt_Nserie.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[3].Value.ToString();
             txt_Marque.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[4].Value.ToString();
             txt_Model.Text = BdlDataGridView2.Rows[e.RowIndex].Cells[5].Value.ToString();
@@ -109,7 +129,7 @@ namespace BDL_System_Pro
 
         public void searchData(string valueToSearch)
         {
-            string query = "SELECT id_parc,N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire from Parc WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
+            string query = "SELECT N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire from Parc WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
             table = new DataTable();
@@ -121,11 +141,12 @@ namespace BDL_System_Pro
         {
             if (id_parc != 0)
             {
-                command = new MySqlCommand("update Parc set Categorie = @type , Marque = @marque, Model = @model, Version = @version, Os = @os, Solution = @solution, Accessoire = @acs, N_client = @ncli, Nserie = @serie where id_parc = @id", connection);
+                command = new MySqlCommand("update Parc set N_Client = @ncli, Categorie = @type, Nserie = @serie, Marque = @marque, Model = @model, Version = @version, Os = @os, Solution = @solution, Accessoire = @acs    where id_parc = @id", connection);
                 connection.Open();
                 command.Parameters.AddWithValue("@id", id_parc);
+                command.Parameters.AddWithValue("@ncli", textBox1.Text);
+                command.Parameters.AddWithValue("@type", comboBox4.SelectedItem);
                 command.Parameters.AddWithValue("@serie", txt_Nserie.Text);
-                command.Parameters.AddWithValue("@type", txt_Type.Text);
                 command.Parameters.AddWithValue("@marque", txt_Marque.Text);
                 command.Parameters.AddWithValue("@model", txt_Model.Text);
                 command.Parameters.AddWithValue("@version", txt_Version.Text);
@@ -214,6 +235,7 @@ namespace BDL_System_Pro
             this.label16.Visible = true;
             this.label17.Visible = true;
             this.comboBox3.Visible = true;
+            this.label12.Visible = true;
             this.comboBox2.Visible = true;
             this.pictureBox10.Visible = true; 
             txt_Model2.Visible = true;
@@ -267,6 +289,7 @@ namespace BDL_System_Pro
                 this.label15.Visible = false;
                 this.label16.Visible = false;
                 this.label17.Visible = false;
+                this.label12.Visible = false;
                 this.label11.Visible = false;
                 txt_Model2.Visible = false;
                 this.comboBox3.Visible = false;
@@ -296,6 +319,7 @@ namespace BDL_System_Pro
             this.comboBox3.Visible = false;
             this.label9.Visible = false;
             this.btn_New.Visible = false;
+            this.label12.Visible = false;
             this.button4.Visible = false;
             this.label11.Visible = false;
             this.label20.Visible = false;
