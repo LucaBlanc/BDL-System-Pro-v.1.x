@@ -21,6 +21,7 @@ namespace BDL_System_Pro
 		DataTable table;
 		int id_inter = 0;
 		string categorie = "";
+		string model = "";
 
 		public fiche_inter()
 		{
@@ -51,21 +52,7 @@ namespace BDL_System_Pro
 			return dtbdd;
 		}
 
-		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-		{
-			if ( comboBox1.SelectedItem.ToString() != "")
-			{
-				this.txt_Type.Visible = false;
-				this.label5.Visible = false;
-				txt_Type.Text = "";
-			}
-			else
-			{
-				this.txt_Type.Visible = true;
-				this.label5.Visible = true;
-			}
-		}
-
+		
 		private void fiche_inter_Load(object sender, EventArgs e)
 		{
 			BdlDataGridView1.DataSource = Getbdd();
@@ -89,6 +76,43 @@ namespace BDL_System_Pro
 				MessageBox.Show(ex.Message);
 			}
 			label1.Text = client.Nom_client;
+		}
+
+		private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+		{
+
+			if (comboBox1.SelectedItem.ToString() != "")
+			{
+				this.txt_Type.Visible = false;
+				model = comboBox1.SelectedItem.ToString();
+				this.label5.Visible = false;
+				txt_Type.Text = "";
+				try
+				{
+					MySqlConnection connection = new MySqlConnection("server=bj881856-001.dbaas.ovh.net;user id=bdl; database=Bdl; port=35312; password=Bdl69100");
+					string selectQuery = "SELECT Nserie from Parc where Model = '" + model + "' and N_client = '" + client.Nom_client + "'";
+					connection.Open();
+					MySqlCommand command = new MySqlCommand(selectQuery, connection);
+
+					MySqlDataReader reader = command.ExecuteReader();
+
+					while (reader.Read())
+					{
+						txt_Nserie.Text = (reader.GetString("Nserie"));
+					}
+
+				}
+				catch
+				{
+
+				}
+			}
+			else
+			{
+				this.txt_Type.Visible = true;
+				this.label5.Visible = true;
+				txt_Nserie.Text = "";
+			}
 		}
 
 		private void DisplayData()

@@ -453,7 +453,7 @@
 			this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
 			this.button2.Font = new System.Drawing.Font("Raleway", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
 			this.button2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(195)))), ((int)(((byte)(18)))));
-			this.button2.Location = new System.Drawing.Point(485, 501);
+			this.button2.Location = new System.Drawing.Point(472, 501);
 			this.button2.Margin = new System.Windows.Forms.Padding(4);
 			this.button2.Name = "button2";
 			this.button2.Size = new System.Drawing.Size(147, 39);
@@ -461,7 +461,6 @@
 			this.button2.Text = "ANNULER";
 			this.button2.UseVisualStyleBackColor = false;
 			this.button2.Visible = false;
-			this.button2.Click += new System.EventHandler(this.button2_Click);
 			// 
 			// btn_Delete
 			// 
@@ -501,7 +500,6 @@
 			this.label11.Size = new System.Drawing.Size(301, 20);
 			this.label11.TabIndex = 148;
 			this.label11.Text = "ID DE LA FICHE D\'INTERVENTION";
-			this.label11.Visible = false;
 			// 
 			// fiche_inter
 			// 
