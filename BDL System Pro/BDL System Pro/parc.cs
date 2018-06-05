@@ -130,7 +130,7 @@ namespace BDL_System_Pro
 
         public void searchData(string valueToSearch)
         {
-            string query = "SELECT id_parc,N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire from Parc WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
+            string query = "SELECT N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire from Parc WHERE CONCAT(" + comboBox1.SelectedItem + ") like '%" + valueToSearch + "%'";
             command = new MySqlCommand(query, connection);
             adapter = new MySqlDataAdapter(command);
             table = new DataTable();

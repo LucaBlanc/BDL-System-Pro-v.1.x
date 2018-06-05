@@ -393,20 +393,22 @@
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.comboBox1.Items.AddRange(new object[] {
-            "Type_parc,Marque_Parc,Model_Parc,Version_parc,Os_parc,Solution_parc",
-            "Type_parc",
-            "Marque_Parc",
-            "Model_Parc",
-            "Version_parc",
-            "Os_parc",
-            "Solution_parc"});
+            "N_client",
+            "Categorie",
+            "Nserie",
+            "Marque",
+            "Model",
+            "Version",
+            "Os",
+            "Solution",
+            "Accessoire",
+            "N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire"});
             this.comboBox1.Location = new System.Drawing.Point(626, 61);
             this.comboBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(149, 32);
             this.comboBox1.TabIndex = 44;
-            this.comboBox1.Text = " Nom,Maintenance,DateMaintenance,Adresse,Cp,Ville,Gsm,Fixe,Responsable,Mail,Siret" +
-    " ";
+            this.comboBox1.Text = " N_client,Categorie,Nserie,Marque,Model,Version,Os,Solution,Accessoire";
             // 
             // btn_Update
             // 
