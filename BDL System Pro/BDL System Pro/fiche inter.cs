@@ -52,10 +52,22 @@ namespace BDL_System_Pro
 			return dtbdd;
 		}
 
-		
+		private void Datasize()
+		{
+			BdlDataGridView1.Columns[0].Width = 90;
+			BdlDataGridView1.Columns[1].Width = 120;
+			BdlDataGridView1.Columns[2].Width = 100;
+			BdlDataGridView1.Columns[3].Width = 200;
+			BdlDataGridView1.Columns[5].Width = 200;
+			BdlDataGridView1.Columns[6].Width = 200;
+		}
+
 		private void fiche_inter_Load(object sender, EventArgs e)
 		{
+
 			BdlDataGridView1.DataSource = Getbdd();
+			Datasize();
+
 			try
 			{
 				MySqlConnection connection = new MySqlConnection("server=bj881856-001.dbaas.ovh.net;user id=bdl; database=Bdl; port=35312; password=Bdl69100");
@@ -220,6 +232,24 @@ namespace BDL_System_Pro
 		}
 
 		private void button2_Click(object sender, EventArgs e)
+		{
+			this.button1.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox5.Visible = false;
+			this.label6.Visible = false;
+			this.textBox2.Visible = false;
+			this.button2.Visible = false;
+			this.btn_Delete.Visible = false;
+			this.pictureBox9.Visible = false;
+			this.label11.Visible = false;
+		}
+
+		private void label7_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void button2_Click_1(object sender, EventArgs e)
 		{
 			this.button1.Visible = false;
 			this.btn_Delete.Visible = false;

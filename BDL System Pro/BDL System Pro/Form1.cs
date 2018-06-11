@@ -75,7 +75,7 @@ namespace BDL_System_Pro
 			BdlDataGridView1.Columns[9].Width = 200;
 			BdlDataGridView1.Columns[10].Width = 130;
 			BdlDataGridView1.Columns[11].Width = 200;
-            BdlDataGridView1.Columns[12].Width = 200;
+            BdlDataGridView1.Columns[12].Width = 100;
         }
 
 
@@ -113,35 +113,7 @@ namespace BDL_System_Pro
 
 		private void button1_Click(object sender, EventArgs e)
 		{
-			this.pictureBox6.Visible = true;
-			this.label9.Visible = true;
-			this.btn_New.Visible = true;
-			this.button4.Visible = true;
-			this.label20.Visible = true;
-			this.label21.Visible = true;
-			this.label22.Visible = true;
-			this.label23.Visible = true;
-			this.label24.Visible = true;
-			this.label25.Visible = true;
-			this.label15.Visible = true;
-			this.label16.Visible = true;
-			this.label17.Visible = true;
-			this.label18.Visible = true;
-			this.label19.Visible = true;
-			this.txt_Nom2.Visible = true;
-			this.txt_Maint2.Visible = true;
-			this.txt_Dat2.Visible = true;
-			this.txt_Adr2.Visible = true;
-			this.txt_Cp2.Visible = true;
-			this.txt_Ville2.Visible = true;
-			this.txt_Gsm2.Visible = true;
-			this.txt_Fix2.Visible = true;
-			this.txt_Resp2.Visible = true;
-			this.txt_Mail2.Visible = true;
-			this.txt_Siret2.Visible = true;
-			this.txt_Web2.Visible = true;
-			this.label26.Visible = true;
-			this.pictureBox10.Visible = true;
+			this.panel1.Visible = true;
 
         }
 
@@ -234,14 +206,7 @@ namespace BDL_System_Pro
 			command.ExecuteReader();
 			connection.Close();
 			DisplayData();
-			this.button3.Visible = false;
-			this.btn_Delete.Visible = false;
-			this.pictureBox5.Visible = false;
-			this.label6.Visible = false;
-			this.textBox2.Visible = false;
-			this.button2.Visible = false;
-			this.btn_Delete.Visible = false;
-			this.pictureBox9.Visible = false;
+			this.panel2.Visible = false;
 			ClearData();
 			ClearData2();
 		}
@@ -251,12 +216,7 @@ namespace BDL_System_Pro
 		{
 			if (client.code_client != 0)
 			{
-				this.btn_Delete.Visible = true;
-				this.pictureBox5.Visible = true;
-				this.label6.Visible = true;
-				this.textBox2.Visible = true;
-				this.button2.Visible = true;
-				this.pictureBox9.Visible = true;
+				this.panel2.Visible = true;
 			}
 			else
 			{
@@ -304,46 +264,12 @@ namespace BDL_System_Pro
 
 		private void button2_Click(object sender, EventArgs e)
 		{
-			this.btn_Delete.Visible = false;
-			this.pictureBox5.Visible = false;
-			this.label6.Visible = false;
-			this.textBox2.Visible = false;
-			this.button2.Visible = false;
-			this.btn_Delete.Visible = false;
-			this.pictureBox9.Visible = false;
+			this.panel2.Visible = false;
 		}
 
 		private void button4_Click(object sender, EventArgs e)
 		{
-			this.pictureBox6.Visible = false;
-			this.label9.Visible = false;
-			this.btn_New.Visible = false;
-			this.button4.Visible = false;
-			this.label20.Visible = false;
-			this.label21.Visible = false;
-			this.label22.Visible = false;
-			this.label23.Visible = false;
-			this.label24.Visible = false;
-			this.label25.Visible = false;
-			pictureBox10.Visible = false;
-			this.label15.Visible = false;
-			this.label16.Visible = false;
-			this.label17.Visible = false;
-			this.label18.Visible = false;
-			this.label19.Visible = false;
-			this.txt_Nom2.Visible = false;
-			txt_Maint2.Visible = false;
-			txt_Dat2.Visible = false;
-			txt_Adr2.Visible = false;
-			txt_Cp2.Visible = false;
-			txt_Ville2.Visible = false;
-			txt_Gsm2.Visible = false;
-			txt_Fix2.Visible = false;
-			txt_Resp2.Visible = false;
-			txt_Mail2.Visible = false;
-			txt_Siret2.Visible = false;
-			txt_Web2.Visible = false;
-			label26.Visible = false;
+			this.panel1.Visible = false;
 			ClearData2();
 		}
 
@@ -371,35 +297,7 @@ namespace BDL_System_Pro
 				command.ExecuteNonQuery();
 				connection.Close();
 				DisplayData();
-				this.pictureBox6.Visible = false;
-				this.label9.Visible = false;
-				this.btn_New.Visible = false;
-				this.button4.Visible = false;
-				this.label20.Visible = false;
-				this.label21.Visible = false;
-				pictureBox10.Visible = false;
-				this.label22.Visible = false;
-				this.label23.Visible = false;
-				this.label24.Visible = false;
-				this.label25.Visible = false;
-				this.label15.Visible = false;
-				this.label16.Visible = false;
-				this.label17.Visible = false;
-				this.label18.Visible = false;
-				this.label19.Visible = false;
-				this.txt_Nom2.Visible = false;
-				txt_Maint2.Visible = false;
-				txt_Dat2.Visible = false;
-				txt_Adr2.Visible = false;
-				txt_Cp2.Visible = false;
-				txt_Ville2.Visible = false;
-				txt_Gsm2.Visible = false;
-				txt_Fix2.Visible = false;
-				txt_Resp2.Visible = false;
-				txt_Mail2.Visible = false;
-				txt_Siret2.Visible = false;
-				txt_Web2.Visible = false;
-				label26.Visible = false;
+				this.panel1.Visible = false;
 				ClearData2();
 
 			}
@@ -560,6 +458,126 @@ namespace BDL_System_Pro
 		}
 
 		private void BdlDataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+		{
+
+		}
+
+		private void label9_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label20_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Nom2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label16_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Dat2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label17_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Adr2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label18_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Cp2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label19_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Web2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Ville2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Siret2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void fond_Click(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label23_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label22_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label24_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Mail2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label25_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Resp2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Fix2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label26_Click_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void txt_Gsm2_TextChanged_1(object sender, EventArgs e)
+		{
+
+		}
+
+		private void label21_Click_1(object sender, EventArgs e)
 		{
 
 		}
